@@ -1,0 +1,20 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for PlaybookService
+
+actor User
+User -> PlaybookService: fillPropertiesOnUpdate()
+participant Playbook
+PlaybookService -> Playbook: invoke dependency
+PlaybookService -> Playbook: invoke dependency
+PlaybookService --> User : return
+User -> PlaybookService: fillPropertiesOnUpdate()
+participant Object
+PlaybookService -> Object: invoke dependency
+PlaybookService -> Object: invoke dependency
+PlaybookService --> User : return
+@enduml

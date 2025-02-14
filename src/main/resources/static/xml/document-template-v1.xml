@@ -1,0 +1,19 @@
+<document version="1.0">
+    <document-type>KB|PB|RB</document-type>
+    <category>IT Operations|Troubleshooting|Networking|Network Troubleshooting</category>
+    <xmlheader>
+        <title>Network Troubleshooting Knowledge Base</title>
+    </xmlheader>
+    <xmlcontent>
+        <steps>
+            <step>1. Verify physical connections to ensure cables are properly connected.</step>
+            <step>2. Check the status of network devices (routers, switches) for errors.</step>
+            <step>3. Use the ping command to test connectivity between devices.</step>
+            <step>4. Analyze routing tables to ensure correct network paths.</step>
+            <step>5. Run a traceroute to detect where the connection fails.</step>
+            <step>6. Examine firewall settings to ensure traffic is not being blocked.</step>
+            <step>7. Check for DNS resolution issues by using nslookup or dig commands.</step>
+            <step>8. Test network speed using tools like iperf to identify bottlenecks.</step>
+        </steps>
+    </xmlcontent>
+</document>

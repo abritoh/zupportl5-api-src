@@ -1,0 +1,14 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for Zupportl5Application
+
+actor User
+User -> Zupportl5Application: main()
+participant String
+Zupportl5Application -> String: invoke dependency
+Zupportl5Application --> User : return
+@enduml

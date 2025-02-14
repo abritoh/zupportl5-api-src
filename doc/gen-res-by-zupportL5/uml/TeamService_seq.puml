@@ -1,0 +1,35 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for TeamService
+
+actor User
+User -> TeamService: getAll()
+TeamService --> User : return
+User -> TeamService: getById()
+participant Integer
+TeamService -> Integer: invoke dependency
+TeamService --> User : return
+User -> TeamService: create()
+participant Team
+TeamService -> Team: invoke dependency
+TeamService --> User : return
+User -> TeamService: update()
+TeamService -> Integer: invoke dependency
+TeamService -> Team: invoke dependency
+TeamService --> User : return
+User -> TeamService: deleteById()
+participant Long
+TeamService -> Long: invoke dependency
+TeamService --> User : return
+User -> TeamService: lambdaupdate1()
+TeamService -> Integer: invoke dependency
+TeamService --> User : return
+User -> TeamService: lambdaupdate0()
+TeamService -> Team: invoke dependency
+TeamService -> Team: invoke dependency
+TeamService --> User : return
+@enduml

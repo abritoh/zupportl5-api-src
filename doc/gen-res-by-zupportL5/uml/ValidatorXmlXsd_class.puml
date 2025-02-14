@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.utils.ValidatorXmlXsd
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class ValidatorXmlXsd {
+ - org.slf4j.Logger logger
+ - javax.xml.validation.Schema schema
+ - java.lang.String xsdFilePath
+ + void () Init()
+ + org.apache.clusterbr.zupportl5.dto.MethodResult<java.lang.String> (java.lang.String, java.lang.String) validate()
+ + org.apache.clusterbr.zupportl5.dto.MethodResult<java.lang.String> (javax.xml.validation.Schema, javax.xml.transform.Source, java.lang.String) validateXML()
+}
+@enduml

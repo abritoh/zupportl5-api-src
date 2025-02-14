@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.KnowledgebaseController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class KnowledgebaseController {
+ - org.apache.clusterbr.zupportl5.service.KnowledgebaseService service
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Knowledgebase> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Knowledgebase> (java.lang.Long) getById()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Knowledgebase> (org.apache.clusterbr.zupportl5.entity.Knowledgebase) create()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Knowledgebase> (java.lang.Long, org.apache.clusterbr.zupportl5.entity.Knowledgebase) update()
+ + org.springframework.http.ResponseEntity<java.lang.Void> (java.lang.Long) delete()
+}
+@enduml

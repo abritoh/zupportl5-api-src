@@ -1,0 +1,88 @@
+/* By ClusterBR (arcbrth@gmail.com) | 2024-1209 | Compiled and deployed implementing MS-GitHub Wfs | Running on google-app-engine */
+
+body {
+    font-family: monospace;
+    background-color: #1e1e1e;
+    color: #00ff00;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h1,
+h2 {
+    color: #00ff00;
+    text-align: center;
+}
+.cp-right {
+    margin-top: 4em;
+    font-size: 1.2em !important;
+}
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #00ff00;
+    padding: 20px;
+    border-radius: 8px;
+}
+.progress {
+    display: none;
+}
+.loading {
+    font-size: 20px;
+    animation: spin 1s linear infinite;
+    text-align: center;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.div-word-wrap {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+.result {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    text-align: center;
+}
+.red {
+    color: red;
+}
+.file-list {
+    color: darkorange;
+}
+.ul-document-types {
+    color: silver;
+}
+.p-higligth {
+    color: aqua;
+}
+a {
+    color: aqua;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: lightcoral;
+}
+a:active {
+    color: orange;
+}
+a:focus {
+    color: yellowgreen;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+a:visited {
+    color: mediumpurple;
+}
+.list-steps {
+    color:turquoise
+}

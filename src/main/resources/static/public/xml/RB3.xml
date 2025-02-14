@@ -1,0 +1,18 @@
+<document version="1.0">
+    <document-type>RB</document-type>
+    <category>Software Development|Maintenance|Patch Management|Patch Management Runbook</category>
+    <xmlheader>
+        <title>Patch Management Runbook</title>
+    </xmlheader>
+    <xmlcontent>
+        <steps>
+            <step>1. Identify critical systems that require patching.</step>
+            <step>2. Review available patches and their impact.</step>
+            <step>3. Schedule patch deployment during maintenance windows.</step>
+            <step>4. Test patches in a staging environment.</step>
+            <step>5. Deploy patches to production systems.</step>
+            <step>6. Verify system functionality after patching.</step>
+            <step>7. Update patch management records and logs.</step>
+        </steps>
+    </xmlcontent>
+</document>

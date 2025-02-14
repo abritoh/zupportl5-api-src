@@ -1,0 +1,23 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for DocumentController
+
+actor User
+User -> DocumentController: getViewForProcessXml()
+DocumentController --> User : return
+User -> DocumentController: getAllDocuments()
+participant Integer
+DocumentController -> Integer: invoke dependency
+DocumentController --> User : return
+User -> DocumentController: getDocument()
+participant String
+DocumentController -> String: invoke dependency
+DocumentController --> User : return
+User -> DocumentController: searchDocuments()
+DocumentController -> String: invoke dependency
+DocumentController --> User : return
+@enduml

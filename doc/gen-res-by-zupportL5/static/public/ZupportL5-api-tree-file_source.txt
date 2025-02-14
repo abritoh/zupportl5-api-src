@@ -1,0 +1,352 @@
+Linux fv-az964-248 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+ (<<compilation-environment | view: before-compilation | z1>>) 
+/home/runner/work/zupportl5-api/zupportl5-api
+.
+├── Dockerfile
+├── LICENSE.md
+├── README.md
+├── app-info.bash
+├── app.yml
+├── doc
+│   ├── config
+│   │   └── application-props.bash
+│   ├── db
+│   │   ├── zupporl5_db_model.txt
+│   │   ├── zupportl5_er_diagram.png
+│   │   ├── zupportl5_er_diagram_cf.png
+│   │   ├── zupportl5_er_diagram_gcp_prod_style_1.png
+│   │   ├── zupportl5_er_diagram_gcp_prod_style_2.png
+│   │   ├── zupportl5_er_diagram_gcp_prod_style_3.png
+│   │   ├── zupportl5_er_diagram_gcp_prod_style_4.png
+│   │   ├── zupportl5_er_diagram_v2.png
+│   │   ├── zupportl5_model_gcp_prod.mwb
+│   │   └── zupportl5_model_v2.mwb
+│   ├── dbox
+│   │   └── info.md
+│   ├── gcp
+│   │   ├── app-console.md
+│   │   ├── app-engine.md
+│   │   ├── deploy-to-gpc.md
+│   │   ├── gcloud.md
+│   │   ├── mysql
+│   │   │   └── describe.txt
+│   │   └── pdf
+│   │       └── gcloud-csheet.pdf
+│   ├── images
+│   │   ├── Dropbox-oauth2-flow-sign-localhost-1.png
+│   │   ├── Dropbox-oauth2-flow-sign-localhost-2.png
+│   │   ├── Dropbox-oauth3-flow-sign-localhost-2.png
+│   │   ├── ZupportL5-GCP-database.PNG
+│   │   └── ZupportL5-api-dependency-tree.png
+│   ├── json
+│   │   ├── api-get-document-response.json
+│   │   └── zupportL5-swagger-api.json
+│   ├── render
+│   │   └── info.md
+│   ├── txt
+│   │   ├── ZupportL5-api-dependency-tree.txt
+│   │   ├── collector.txt
+│   │   └── dependency-tree.txt
+│   └── xml
+│       ├── KB1.xml
+│       ├── KB2.xml
+│       ├── KB3.xml
+│       ├── PB1.xml
+│       ├── PB2.xml
+│       ├── PB3.xml
+│       ├── RB1.xml
+│       ├── RB2.xml
+│       └── RB3.xml
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── org
+    │   │       └── apache
+    │   │           └── clusterbr
+    │   │               ├── Zupportl5Application.java
+    │   │               └── zupportl5
+    │   │                   ├── annotations
+    │   │                   │   ├── Detailed.java
+    │   │                   │   ├── ExecuteJavadocProcessing.java
+    │   │                   │   └── SkipJavadocProcessing.java
+    │   │                   ├── component
+    │   │                   │   ├── AppInfoLoader.java
+    │   │                   │   ├── DatabaseSessionStore.java
+    │   │                   │   ├── DropboxAuthStateCleanupJob.java
+    │   │                   │   ├── XmlDBInsertionTasklet.java
+    │   │                   │   ├── XmlDropboxUploadTasklet.java
+    │   │                   │   └── XmlValidationTasklet.java
+    │   │                   ├── config
+    │   │                   │   ├── AppConfig.java
+    │   │                   │   ├── DataSourceConfig.java
+    │   │                   │   ├── LocaleConfig.java
+    │   │                   │   ├── MessageSourceConfig.java
+    │   │                   │   ├── WebConfig.java
+    │   │                   │   └── batch
+    │   │                   │       └── XmlDocumentProcessorConfig.java
+    │   │                   ├── controller
+    │   │                   │   ├── ApiRootController.java
+    │   │                   │   ├── DocumentBatchController.java
+    │   │                   │   ├── DocumentController.java
+    │   │                   │   ├── DropboxAuthorizationController.java
+    │   │                   │   ├── EngineerController.java
+    │   │                   │   ├── HandoverController.java
+    │   │                   │   ├── IncidentController.java
+    │   │                   │   ├── IncidentlogsController.java
+    │   │                   │   ├── KnowledgebaseController.java
+    │   │                   │   ├── PerformanceMetricController.java
+    │   │                   │   ├── PlaybookController.java
+    │   │                   │   ├── PriorityController.java
+    │   │                   │   ├── ResolutionStepController.java
+    │   │                   │   ├── RunbookController.java
+    │   │                   │   ├── StaticContentController.java
+    │   │                   │   ├── StatusController.java
+    │   │                   │   ├── TeamController.java
+    │   │                   │   ├── ViewHandoverDetailController.java
+    │   │                   │   └── ViewIncidentDetailController.java
+    │   │                   ├── dto
+    │   │                   │   ├── AppInfoHolder.java
+    │   │                   │   ├── DocumentDto.java
+    │   │                   │   ├── MethodResult.java
+    │   │                   │   ├── MethodResultXml.java
+    │   │                   │   ├── SettingsDto.java
+    │   │                   │   ├── Tuple.java
+    │   │                   │   └── xml
+    │   │                   │       ├── DocumentXml.java
+    │   │                   │       ├── XmlContent.java
+    │   │                   │       ├── XmlHeader.java
+    │   │                   │       └── XmlSteps.java
+    │   │                   ├── entity
+    │   │                   │   ├── DropboxAuthState.java
+    │   │                   │   ├── Engineer.java
+    │   │                   │   ├── Handover.java
+    │   │                   │   ├── Incident.java
+    │   │                   │   ├── Incidentlogs.java
+    │   │                   │   ├── Knowledgebase.java
+    │   │                   │   ├── PerformanceMetric.java
+    │   │                   │   ├── Playbook.java
+    │   │                   │   ├── Priority.java
+    │   │                   │   ├── ResolutionStep.java
+    │   │                   │   ├── Runbook.java
+    │   │                   │   ├── Settings.java
+    │   │                   │   ├── Status.java
+    │   │                   │   ├── Team.java
+    │   │                   │   ├── ViewHandoverDetail.java
+    │   │                   │   └── ViewIncidentDetail.java
+    │   │                   ├── enums
+    │   │                   │   └── HttpStatusCodeEnum.java
+    │   │                   ├── exception
+    │   │                   │   └── RestApiException.java
+    │   │                   ├── generic
+    │   │                   │   └── GenericEntityService.java
+    │   │                   ├── interceptor
+    │   │                   │   ├── LocaleInterceptor.java
+    │   │                   │   └── TrailingSlashInterceptor.java
+    │   │                   ├── mapper
+    │   │                   │   └── SettingsMapper.java
+    │   │                   ├── processor
+    │   │                   │   ├── ActivityDiagramGenerator.java
+    │   │                   │   ├── ClassDiagramGenerator.java
+    │   │                   │   ├── CodeMetricsGenerator.java
+    │   │                   │   ├── DiagramGeneratorBase.java
+    │   │                   │   ├── HtmlSwaggerDocGenerator.java
+    │   │                   │   ├── JavadocCommentBuilder.java
+    │   │                   │   ├── JavadocProcessor.java
+    │   │                   │   ├── JavadocProcessorBase.java
+    │   │                   │   ├── OpenApiDocGeneratorBase.java
+    │   │                   │   ├── OpenApiJsonDocGenerator.java
+    │   │                   │   ├── ProcessorSettings.java
+    │   │                   │   ├── SequenceDiagramGenerator.java
+    │   │                   │   ├── StaticDiagramGenerator.java
+    │   │                   │   ├── SystemTreeFileExecutor.java
+    │   │                   │   ├── UCDiagramGenerator.java
+    │   │                   │   ├── UMLGenerator.java
+    │   │                   │   └── ZupportL5Processor.java
+    │   │                   ├── repository
+    │   │                   │   ├── DropboxAuthStateRepository.java
+    │   │                   │   ├── EngineerRepository.java
+    │   │                   │   ├── HandoverRepository.java
+    │   │                   │   ├── IncidentRepository.java
+    │   │                   │   ├── IncidentRepositoryCriteria.java
+    │   │                   │   ├── IncidentRepositoryImpl.java
+    │   │                   │   ├── IncidentlogsRepository.java
+    │   │                   │   ├── KnowledgebaseRepository.java
+    │   │                   │   ├── PerformanceMetricRepository.java
+    │   │                   │   ├── PlaybookRepository.java
+    │   │                   │   ├── PriorityRepository.java
+    │   │                   │   ├── ResolutionStepRepository.java
+    │   │                   │   ├── RunbookRepository.java
+    │   │                   │   ├── SettingsRepository.java
+    │   │                   │   ├── StatusRepository.java
+    │   │                   │   ├── TeamRepository.java
+    │   │                   │   ├── ViewHandoverDetailRepository.java
+    │   │                   │   └── ViewIncidentDetailRepository.java
+    │   │                   ├── service
+    │   │                   │   ├── ApplicationInfoService.java
+    │   │                   │   ├── DocumentService.java
+    │   │                   │   ├── EngineerService.java
+    │   │                   │   ├── GenericServiceImpl.java
+    │   │                   │   ├── HandoverService.java
+    │   │                   │   ├── IncidentService.java
+    │   │                   │   ├── IncidentlogsService.java
+    │   │                   │   ├── KnowledgebaseService.java
+    │   │                   │   ├── MessageService.java
+    │   │                   │   ├── PerformanceMetricService.java
+    │   │                   │   ├── PlaybookService.java
+    │   │                   │   ├── PriorityService.java
+    │   │                   │   ├── ResolutionStepService.java
+    │   │                   │   ├── RunbookService.java
+    │   │                   │   ├── SettingsService.java
+    │   │                   │   ├── StatusService.java
+    │   │                   │   ├── TeamService.java
+    │   │                   │   ├── ViewHandoverDetailService.java
+    │   │                   │   ├── ViewIncidentDetailService.java
+    │   │                   │   └── dropbox
+    │   │                   │       ├── DropboxAuthStateService.java
+    │   │                   │       ├── DropboxService.java
+    │   │                   │       └── DropboxTokenService.java
+    │   │                   └── utils
+    │   │                       ├── AppConstants.java
+    │   │                       ├── AppLangUtil.java
+    │   │                       ├── GCPSecretManagerUtil.java
+    │   │                       ├── GenericXpathReader.java
+    │   │                       ├── JsonUtil.java
+    │   │                       ├── PropertiesProvider.java
+    │   │                       ├── StreamUtil.java
+    │   │                       ├── ValidatorXmlXsd.java
+    │   │                       ├── XmlUtil.java
+    │   │                       └── package-info.java
+    │   └── resources
+    │       ├── application-dev.properties
+    │       ├── application-devgcp.properties
+    │       ├── application-prod.properties
+    │       ├── application.properties
+    │       ├── banner.txt
+    │       ├── data.sql
+    │       ├── logback.xml
+    │       ├── messages
+    │       │   ├── messages-en.properties
+    │       │   └── messages-es.properties
+    │       ├── schema-sb-5.1.2.sql
+    │       ├── schema-sps.sql
+    │       ├── schema.sql
+    │       └── static
+    │           ├── html
+    │           │   ├── project-metrics-template.html
+    │           │   └── project-swagger-template.html
+    │           ├── public
+    │           │   ├── ZupportL5-api-crt-tree.html
+    │           │   ├── ZupportL5-api-dependency-tree.html
+    │           │   ├── ZupportL5-api-model-overview.html
+    │           │   ├── ZupportL5-api-overview.html
+    │           │   ├── ZupportL5-api-tree-file_source.txt
+    │           │   ├── ZupportL5-api-viewer.html
+    │           │   ├── css
+    │           │   │   ├── crt-tree.css
+    │           │   │   ├── dependency-tree.css
+    │           │   │   ├── document-viewer.css
+    │           │   │   ├── index.css
+    │           │   │   ├── metrics.css
+    │           │   │   ├── model-overview.css
+    │           │   │   ├── overview.css
+    │           │   │   ├── swagger-style.css
+    │           │   │   └── view-batch-upload.css
+    │           │   ├── document-viewer.html
+    │           │   ├── img
+    │           │   │   ├── ZupportL5-1.jpg
+    │           │   │   ├── ZupportL5-api-components.png
+    │           │   │   ├── ZupportL5-api-er-diagram-alt.png
+    │           │   │   ├── ZupportL5-api-er-diagram.png
+    │           │   │   ├── favicon-32x32.png
+    │           │   │   ├── favicon-blue.ico
+    │           │   │   ├── favicon.png
+    │           │   │   └── technology-stack-icons
+    │           │   │       ├── ci-cd.png
+    │           │   │       ├── classgraph.png
+    │           │   │       ├── docker.png
+    │           │   │       ├── docker2.png
+    │           │   │       ├── dropbox.png
+    │           │   │       ├── dtd.png
+    │           │   │       ├── git.png
+    │           │   │       ├── github-actions.png
+    │           │   │       ├── github.png
+    │           │   │       ├── google-app-engine.png
+    │           │   │       ├── google-cloud.png
+    │           │   │       ├── hibernate.png
+    │           │   │       ├── html.png
+    │           │   │       ├── java-ee.png
+    │           │   │       ├── java-ee1.png
+    │           │   │       ├── javadoc.png
+    │           │   │       ├── javascript.png
+    │           │   │       ├── jpa.png
+    │           │   │       ├── jpa1.png
+    │           │   │       ├── json.png
+    │           │   │       ├── junit-mockito.png
+    │           │   │       ├── linux.png
+    │           │   │       ├── markdown.png
+    │           │   │       ├── maven.png
+    │           │   │       ├── microsoft-azure.png
+    │           │   │       ├── mysql.png
+    │           │   │       ├── mysql1.png
+    │           │   │       ├── oauth2.png
+    │           │   │       ├── openapi.png
+    │           │   │       ├── plantuml.png
+    │           │   │       ├── prometheus.png
+    │           │   │       ├── slf4j.png
+    │           │   │       ├── spring-batch.png
+    │           │   │       ├── spring-boot.png
+    │           │   │       ├── spring-mvc.png
+    │           │   │       ├── uml.png
+    │           │   │       ├── undertown.png
+    │           │   │       ├── xml.png
+    │           │   │       ├── yml.png
+    │           │   │       └── zupportl5api.png
+    │           │   ├── index.html
+    │           │   ├── js
+    │           │   │   ├── document-viewer.js
+    │           │   │   └── redoc.standalone.js
+    │           │   ├── view-batch-upload.html
+    │           │   └── xml
+    │           │       ├── KB1.xml
+    │           │       ├── PB1.xml
+    │           │       └── RB3.xml
+    │           ├── puml
+    │           │   ├── XmlDocumentProcessorConfig-flow.puml
+    │           │   └── ZupportL5-api-components.puml
+    │           └── xml
+    │               ├── document-template-v1.xml
+    │               ├── document-validator-v1.dtd
+    │               ├── document-validator-v1.xsd
+    │               └── zupportl5-deployment.xml
+    └── test
+        ├── java
+        │   └── org
+        │       └── apache
+        │           └── clusterbr
+        │               ├── integration
+        │               │   ├── EngineerControllerTest.java
+        │               │   ├── IncidentControllerTest.java
+        │               │   └── package-info.java
+        │               ├── package-info.java
+        │               └── unit
+        │                   ├── EngineerServiceTest.java
+        │                   ├── IncidentServiceTest.java
+        │                   ├── MessageServiceTest.java
+        │                   └── package-info.java
+        └── resources
+            ├── info.txt
+            └── logback-test.xml
+
+57 directories, 278 files
+{
+  "ip": "20.42.50.72",
+  "city": "Wardensville",
+  "region": "West Virginia",
+  "country": "US",
+  "loc": "39.0751,-78.5978",
+  "org": "AS8075 Microsoft Corporation",
+  "postal": "26851",
+  "timezone": "America/New_York",
+  "readme": "https://ipinfo.io/missingauth"
+}

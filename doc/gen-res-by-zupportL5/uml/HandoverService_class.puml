@@ -1,0 +1,22 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.HandoverService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class HandoverService {
+ - org.apache.clusterbr.zupportl5.repository.HandoverRepository repository
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Handover> () findAll()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Handover> (java.lang.Integer) findById()
+ + org.apache.clusterbr.zupportl5.entity.Handover (org.apache.clusterbr.zupportl5.entity.Handover) save()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Handover> (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.Handover) update()
+ + boolean (java.lang.Integer) deleteById()
+ + org.apache.clusterbr.zupportl5.entity.Handover (org.apache.clusterbr.zupportl5.entity.Handover, org.apache.clusterbr.zupportl5.entity.Handover) lambdaupdate0()
+}
+@enduml

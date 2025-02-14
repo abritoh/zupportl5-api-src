@@ -1,0 +1,51 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.ViewIncidentDetail
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class ViewIncidentDetail {
+ - java.lang.Long id
+ - java.lang.String title
+ - java.lang.String description
+ - java.lang.Integer statusId
+ - java.lang.String statusName
+ - java.lang.Integer priorityId
+ - java.lang.String priorityName
+ - java.lang.Integer teamId
+ - java.lang.String teamName
+ - java.time.LocalDateTime createdAt
+ - java.time.LocalDateTime updatedAt
+ - java.time.LocalDateTime resolvedAt
+ + java.lang.Long () getId()
+ + void (java.lang.Long) setId()
+ + java.lang.String () getTitle()
+ + void (java.lang.String) setTitle()
+ + java.lang.String () getDescription()
+ + void (java.lang.String) setDescription()
+ + java.lang.Integer () getStatusId()
+ + void (java.lang.Integer) setStatusId()
+ + java.lang.String () getStatusName()
+ + void (java.lang.String) setStatusName()
+ + java.lang.Integer () getPriorityId()
+ + void (java.lang.Integer) setPriorityId()
+ + java.lang.String () getPriorityName()
+ + void (java.lang.String) setPriorityName()
+ + java.lang.Integer () getTeamId()
+ + void (java.lang.Integer) setTeamId()
+ + java.lang.String () getTeamName()
+ + void (java.lang.String) setTeamName()
+ + java.time.LocalDateTime () getCreatedAt()
+ + void (java.time.LocalDateTime) setCreatedAt()
+ + java.time.LocalDateTime () getUpdatedAt()
+ + void (java.time.LocalDateTime) setUpdatedAt()
+ + java.time.LocalDateTime () getResolvedAt()
+ + void (java.time.LocalDateTime) setResolvedAt()
+}
+@enduml

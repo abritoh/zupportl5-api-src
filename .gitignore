@@ -1,0 +1,17 @@
+target
+logs
+.mvn
+.project
+.classpath
+.settings
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar
+*.rar
+

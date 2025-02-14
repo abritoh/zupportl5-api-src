@@ -1,0 +1,16 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for ViewIncidentDetailService
+
+actor User
+User -> ViewIncidentDetailService: findAll()
+ViewIncidentDetailService --> User : return
+User -> ViewIncidentDetailService: findById()
+participant Long
+ViewIncidentDetailService -> Long: invoke dependency
+ViewIncidentDetailService --> User : return
+@enduml

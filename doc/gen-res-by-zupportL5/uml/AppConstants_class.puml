@@ -1,0 +1,25 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.utils.AppConstants
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class AppConstants {
+ - java.lang.String EMPTY
+ - java.lang.String SPACE
+ - java.lang.String NULL
+ - java.lang.String DIAG
+ - java.lang.String CARRIAGE_RETURN
+ - java.lang.String UPLOADED
+ - java.lang.String MSG_UPLOAD_FAILED
+ - java.lang.String MSG_UPLOAD_INVALID_TOKEN
+ - java.lang.String DROPBOX_EXCEPTION_INVALID_TOKEN
+ - java.lang.String VALID
+}
+@enduml

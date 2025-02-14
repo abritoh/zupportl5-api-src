@@ -1,0 +1,26 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.processor.DiagramGenerator
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class DiagramGenerator {
+ - java.lang.String NEW_LINE
+ - java.lang.String SPACE
+ - java.lang.String BACKGROUND_COLOR
+ - java.lang.String ARROW_COLOR
+ - java.lang.String BORDER_COLOR
+ - java.lang.String STEREOTYPE_CB_BG_COLOR
+ - java.lang.String GENERATE_PLANTUML_FOR_PACKAGE_DEFAULT
+ - java.lang.String PLANTUML_DESTINATION_FOLDER_DEFAULT
+ - java.lang.String IMAGES_DESTINATION_FOLDER_DEFAULT
+ - java.lang.String PLANTUML_STATIC_PUML_FOLDER_DEFAULT
+ - org.apache.clusterbr.zupportl5.processor.ProcessorSettings this0
+}
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for DatabaseSessionStore
+
+actor User
+User -> DatabaseSessionStore: get()
+DatabaseSessionStore --> User : return
+User -> DatabaseSessionStore: set()
+participant String
+DatabaseSessionStore -> String: invoke dependency
+DatabaseSessionStore --> User : return
+User -> DatabaseSessionStore: clear()
+DatabaseSessionStore --> User : return
+User -> DatabaseSessionStore: setThreadLocalRequestId()
+DatabaseSessionStore -> String: invoke dependency
+DatabaseSessionStore --> User : return
+User -> DatabaseSessionStore: get()
+DatabaseSessionStore -> String: invoke dependency
+DatabaseSessionStore --> User : return
+User -> DatabaseSessionStore: set()
+DatabaseSessionStore -> String: invoke dependency
+DatabaseSessionStore -> String: invoke dependency
+DatabaseSessionStore -> String: invoke dependency
+DatabaseSessionStore --> User : return
+User -> DatabaseSessionStore: clear()
+DatabaseSessionStore -> String: invoke dependency
+DatabaseSessionStore --> User : return
+@enduml

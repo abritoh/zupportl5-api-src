@@ -1,0 +1,34 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.processor.DiagramGeneratorBase
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class DiagramGeneratorBase {
+ - org.slf4j.Logger logger
+ - java.lang.String generatePlantumlForPackage
+ - java.lang.String plantumlDestinationFolderPuml
+ - java.lang.String plantumlDestinationFolderImg
+ - java.lang.String staticPumlFolder
+ - org.apache.clusterbr.zupportl5.utils.PropertiesProvider propertiesProvider
+ - java.io.File outputDirPuml
+ - java.io.File outputDirImg
+ + void () generate()
+ + java.lang.String (java.lang.String) sanitize()
+ + void (java.lang.StringBuilder, java.lang.String) savePUMLAndGenerateDiagram()
+ + void (java.io.File) generateDiagramFromStaticPuml()
+ + void (java.io.File) generateDiagramFromDynamicPuml()
+ + void (java.io.File, java.lang.String) generateDiagramFromPuml()
+ + boolean (io.github.classgraph.ClassInfo) isRelevantForUseCaseAndSequence()
+ + boolean (io.github.classgraph.MethodInfo) requiresDetailedMode()
+ + void (java.io.File, int) insertScaleDirective()
+ + void (java.io.File) configureImageSettings()
+ + int (java.io.File) estimateDiagramComplexity()
+}
+@enduml

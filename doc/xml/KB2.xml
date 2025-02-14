@@ -1,0 +1,16 @@
+<document version="1.0">
+    <document-type>KB</document-type>
+    <category>IT Security|Incident Handling|Phishing|Phishing Incident Handling</category>
+    <xmlheader>
+        <title>Phishing Incident Handling</title>
+    </xmlheader>
+    <xmlcontent>
+        <steps>
+            <step>1. Identify and isolate the phishing incident.</step>
+            <step>2. Notify affected users and stakeholders.</step>
+            <step>3. Analyze the phishing email and its impact.</step>
+            <step>4. Remove malicious content and block phishing sources.</step>
+            <step>5. Educate users on recognizing phishing attempts.</step>
+        </steps>
+    </xmlcontent>
+</document>

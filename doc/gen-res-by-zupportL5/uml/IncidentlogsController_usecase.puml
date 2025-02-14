@@ -1,0 +1,21 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for IncidentlogsController
+
+actor User
+usecase "getAll" as UC_getAll
+User --> UC_getAll
+usecase "getById" as UC_getById
+User --> UC_getById
+usecase "create" as UC_create
+User --> UC_create
+usecase "update" as UC_update
+User --> UC_update
+usecase "delete" as UC_delete
+User --> UC_delete
+@enduml

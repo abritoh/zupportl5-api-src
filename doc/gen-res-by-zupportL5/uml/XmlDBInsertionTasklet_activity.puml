@@ -1,0 +1,21 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for XmlDBInsertionTasklet
+
+if (execute) then (yes)
+:execute;
+endif
+if (insertIntoDatabase) then (yes)
+:insertIntoDatabase;
+endif
+if (areStepParameteresNotNull) then (yes)
+:areStepParameteresNotNull;
+endif
+stop
+@enduml

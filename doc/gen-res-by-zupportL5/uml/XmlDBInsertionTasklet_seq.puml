@@ -1,0 +1,25 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for XmlDBInsertionTasklet
+
+actor User
+User -> XmlDBInsertionTasklet: execute()
+participant StepContribution
+XmlDBInsertionTasklet -> StepContribution: invoke dependency
+participant ChunkContext
+XmlDBInsertionTasklet -> ChunkContext: invoke dependency
+XmlDBInsertionTasklet --> User : return
+User -> XmlDBInsertionTasklet: insertIntoDatabase()
+participant DocumentXml
+XmlDBInsertionTasklet -> DocumentXml: invoke dependency
+XmlDBInsertionTasklet --> User : return
+User -> XmlDBInsertionTasklet: areStepParameteresNotNull()
+participant String
+XmlDBInsertionTasklet -> String: invoke dependency
+XmlDBInsertionTasklet -> String: invoke dependency
+XmlDBInsertionTasklet --> User : return
+@enduml

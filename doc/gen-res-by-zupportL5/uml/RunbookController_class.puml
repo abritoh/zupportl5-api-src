@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.RunbookController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class RunbookController {
+ - org.apache.clusterbr.zupportl5.service.RunbookService service
+ + org.springframework.http.ResponseEntity<java.util.List<org.apache.clusterbr.zupportl5.entity.Runbook>> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Runbook> (java.lang.Long) getById()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Runbook> (org.apache.clusterbr.zupportl5.entity.Runbook) create()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Runbook> (java.lang.Long, org.apache.clusterbr.zupportl5.entity.Runbook) update()
+ + org.springframework.http.ResponseEntity<java.lang.Void> (java.lang.Long) deleteById()
+}
+@enduml

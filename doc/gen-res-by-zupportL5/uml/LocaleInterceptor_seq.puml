@@ -1,0 +1,18 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for LocaleInterceptor
+
+actor User
+User -> LocaleInterceptor: preHandle()
+participant HttpServletRequest
+LocaleInterceptor -> HttpServletRequest: invoke dependency
+participant HttpServletResponse
+LocaleInterceptor -> HttpServletResponse: invoke dependency
+participant Object
+LocaleInterceptor -> Object: invoke dependency
+LocaleInterceptor --> User : return
+@enduml

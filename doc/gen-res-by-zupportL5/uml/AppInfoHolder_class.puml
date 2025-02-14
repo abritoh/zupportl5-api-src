@@ -1,0 +1,29 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.dto.AppInfoHolder
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class AppInfoHolder {
+ - org.slf4j.Logger logger
+ - org.apache.clusterbr.zupportl5.dto.AppInfoHolder instance
+ - java.lang.String protocol
+ - java.lang.String hostName
+ - int serverPort
+ + org.apache.clusterbr.zupportl5.dto.AppInfoHolder () getInstance()
+ + java.lang.String () getProtocol()
+ + void (java.lang.String) setProtocol()
+ + java.lang.String () getHostName()
+ + void (java.lang.String) setHostName()
+ + int () getServerPort()
+ + void (int) setServerPort()
+ + java.lang.String () getServerUrl()
+ + java.lang.String (java.lang.String) correctUrl()
+}
+@enduml

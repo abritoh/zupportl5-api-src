@@ -1,0 +1,34 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for PriorityService
+
+actor User
+User -> PriorityService: getAll()
+PriorityService --> User : return
+User -> PriorityService: getById()
+participant Integer
+PriorityService -> Integer: invoke dependency
+PriorityService --> User : return
+User -> PriorityService: create()
+participant Priority
+PriorityService -> Priority: invoke dependency
+PriorityService --> User : return
+User -> PriorityService: update()
+PriorityService -> Integer: invoke dependency
+PriorityService -> Priority: invoke dependency
+PriorityService --> User : return
+User -> PriorityService: deleteById()
+PriorityService -> Integer: invoke dependency
+PriorityService --> User : return
+User -> PriorityService: lambdaupdate1()
+PriorityService -> Integer: invoke dependency
+PriorityService --> User : return
+User -> PriorityService: lambdaupdate0()
+PriorityService -> Priority: invoke dependency
+PriorityService -> Priority: invoke dependency
+PriorityService --> User : return
+@enduml

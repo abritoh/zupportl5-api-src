@@ -1,0 +1,27 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for PlaybookController
+
+actor User
+User -> PlaybookController: getAll()
+PlaybookController --> User : return
+User -> PlaybookController: getById()
+participant Long
+PlaybookController -> Long: invoke dependency
+PlaybookController --> User : return
+User -> PlaybookController: create()
+participant Playbook
+PlaybookController -> Playbook: invoke dependency
+PlaybookController --> User : return
+User -> PlaybookController: update()
+PlaybookController -> Long: invoke dependency
+PlaybookController -> Playbook: invoke dependency
+PlaybookController --> User : return
+User -> PlaybookController: deleteById()
+PlaybookController -> Long: invoke dependency
+PlaybookController --> User : return
+@enduml

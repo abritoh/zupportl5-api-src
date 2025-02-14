@@ -1,0 +1,33 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.Engineer
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class Engineer {
+ - java.lang.Integer id
+ - java.lang.String firstName
+ - java.lang.String lastName
+ - java.lang.String email
+ - java.lang.String role
+ - org.apache.clusterbr.zupportl5.entity.Team teamID
+ + java.lang.Integer () getId()
+ + void (java.lang.Integer) setId()
+ + java.lang.String () getFirstName()
+ + void (java.lang.String) setFirstName()
+ + java.lang.String () getLastName()
+ + void (java.lang.String) setLastName()
+ + java.lang.String () getEmail()
+ + void (java.lang.String) setEmail()
+ + java.lang.String () getRole()
+ + void (java.lang.String) setRole()
+ + org.apache.clusterbr.zupportl5.entity.Team () getTeamID()
+ + void (org.apache.clusterbr.zupportl5.entity.Team) setTeamID()
+}
+@enduml

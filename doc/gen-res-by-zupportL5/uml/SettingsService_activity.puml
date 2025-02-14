@@ -1,0 +1,40 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for SettingsService
+
+if (getAll) then (yes)
+:getAll;
+endif
+if (getByKey) then (yes)
+:getByKey;
+endif
+if (save) then (yes)
+:save;
+endif
+if (create) then (yes)
+:create;
+endif
+if (update) then (yes)
+:update;
+endif
+if (deleteByKey) then (yes)
+:deleteByKey;
+endif
+if (lambdaupdate1) then (yes)
+:lambdaupdate1;
+else (nothing)
+:No Operation;
+endif
+if (lambdaupdate0) then (yes)
+:lambdaupdate0;
+else (nothing)
+:No Operation;
+endif
+stop
+@enduml

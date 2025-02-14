@@ -1,0 +1,24 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.PerformanceMetricService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class PerformanceMetricService {
+ - org.apache.clusterbr.zupportl5.repository.PerformanceMetricRepository repository
+ - org.apache.clusterbr.zupportl5.service.MessageService msgService
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.PerformanceMetric> () getAll()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.PerformanceMetric> (java.lang.Integer) getById()
+ + org.apache.clusterbr.zupportl5.entity.PerformanceMetric (org.apache.clusterbr.zupportl5.entity.PerformanceMetric) create()
+ + org.apache.clusterbr.zupportl5.entity.PerformanceMetric (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.PerformanceMetric) update()
+ + boolean (java.lang.Integer) deleteById()
+ + org.apache.clusterbr.zupportl5.exception.RestApiException (java.lang.Integer) lambdaupdate1()
+ + org.apache.clusterbr.zupportl5.entity.PerformanceMetric (org.apache.clusterbr.zupportl5.entity.PerformanceMetric, org.apache.clusterbr.zupportl5.entity.PerformanceMetric) lambdaupdate0()
+}
+@enduml

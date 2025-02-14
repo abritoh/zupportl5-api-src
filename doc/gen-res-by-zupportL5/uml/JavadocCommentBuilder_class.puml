@@ -1,0 +1,31 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class JavadocCommentBuilder {
+ - org.slf4j.Logger logger
+ - java.util.List<java.lang.String> comments
+ - java.lang.String STR_NEW_LINE
+ - java.lang.String START_COMMENT_SYMBOL
+ - java.lang.String LINE_START_COMMENTS
+ - java.lang.String LINE__END__COMMENTS
+ + boolean () haveComments()
+ + java.util.List<java.lang.String> () getCommentsList()
+ + java.lang.String () insertSTARTComment()
+ + java.lang.String () insertENDComment()
+ + org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder (org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder) insertJavadocCommentBuilder()
+ + org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder (java.util.List<java.lang.String>) insertCommentLineList()
+ + org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder (java.lang.String[]) insertCommentLineArray()
+ + java.lang.String (java.lang.String) insertCommentLine()
+ + java.lang.String () toString()
+ + boolean (java.lang.String) lambdahaveComments0()
+}
+@enduml

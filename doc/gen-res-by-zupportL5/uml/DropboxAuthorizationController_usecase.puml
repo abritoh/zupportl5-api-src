@@ -1,0 +1,15 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for DropboxAuthorizationController
+
+actor User
+usecase "startAuthorization" as UC_startAuthorization
+User --> UC_startAuthorization
+usecase "handleCallback" as UC_handleCallback
+User --> UC_handleCallback
+@enduml

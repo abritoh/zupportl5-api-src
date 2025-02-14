@@ -1,0 +1,27 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for ResolutionStepController
+
+actor User
+User -> ResolutionStepController: getAll()
+ResolutionStepController --> User : return
+User -> ResolutionStepController: getById()
+participant Integer
+ResolutionStepController -> Integer: invoke dependency
+ResolutionStepController --> User : return
+User -> ResolutionStepController: save()
+participant ResolutionStep
+ResolutionStepController -> ResolutionStep: invoke dependency
+ResolutionStepController --> User : return
+User -> ResolutionStepController: update()
+ResolutionStepController -> Integer: invoke dependency
+ResolutionStepController -> ResolutionStep: invoke dependency
+ResolutionStepController --> User : return
+User -> ResolutionStepController: deleteById()
+ResolutionStepController -> Integer: invoke dependency
+ResolutionStepController --> User : return
+@enduml

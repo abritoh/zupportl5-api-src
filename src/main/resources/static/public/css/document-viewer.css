@@ -1,0 +1,110 @@
+/* By ClusterBR (arcbrth@gmail.com) | 2024-1209 | Compiled and deployed implementing MS-GitHub Wfs | Running on google-app-engine */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    text-align: center;
+    padding: 2px;
+    color: white;
+    background-color: rgb(0, 51, 102);     
+    border-bottom: 1px solid #ddd;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 140px);
+}
+.left-panel {
+    flex: 1;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+.right-panel {
+    flex: 2;
+    padding: 1rem;
+}
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    background-color: #f8f9fa;
+}
+.tab-button {
+    flex: 1;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    text-align: center;
+}
+.tab-button.active {
+    background-color: #F8981D;
+    font-weight: bold;
+}
+.tab-content {
+    padding: 1rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.tab-content.hidden {
+    display: none;
+}
+.tab-content ul {
+    list-style: none;
+    padding: 0;
+}
+.tab-content ul li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.tab-content ul li:hover {
+    background-color: #F8981D;
+}
+.steps {
+    list-style-type: none;
+    padding-left: 0;
+}
+.steps li {
+    list-style-type: none;
+}
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.search-bar input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.search-bar button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+#documentDetails {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+.header-left-item {
+    font-weight: 300;
+    font-style: italic;
+}
+.header-right-item {
+    font-weight: 600;
+}
+

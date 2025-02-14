@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.Status
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class Status {
+ - java.lang.Integer id
+ - java.lang.String name
+ + java.lang.Integer () getId()
+ + void (java.lang.Integer) setId()
+ + java.lang.String () getName()
+ + void (java.lang.String) setName()
+}
+@enduml

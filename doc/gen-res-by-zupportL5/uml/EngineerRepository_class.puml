@@ -1,0 +1,23 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.repository.EngineerRepository
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class EngineerRepository {
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Engineer> (java.lang.String) findByEmail()
+}
+EngineerRepository ..|> orgspringframeworkdatajparepositoryJpaRepository
+EngineerRepository ..|> orgspringframeworkdatarepositoryListCrudRepository
+EngineerRepository ..|> orgspringframeworkdatarepositoryListPagingAndSortingRepository
+EngineerRepository ..|> orgspringframeworkdatarepositoryqueryQueryByExampleExecutor
+EngineerRepository ..|> orgspringframeworkdatarepositoryCrudRepository
+EngineerRepository ..|> orgspringframeworkdatarepositoryPagingAndSortingRepository
+EngineerRepository ..|> orgspringframeworkdatarepositoryRepository
+@enduml

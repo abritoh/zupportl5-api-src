@@ -1,0 +1,16 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for ViewHandoverDetailController
+
+actor User
+User -> ViewHandoverDetailController: getAll()
+ViewHandoverDetailController --> User : return
+User -> ViewHandoverDetailController: getById()
+participant Long
+ViewHandoverDetailController -> Long: invoke dependency
+ViewHandoverDetailController --> User : return
+@enduml

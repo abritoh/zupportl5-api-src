@@ -1,0 +1,29 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for DocumentService
+
+actor User
+User -> DocumentService: getDocument()
+participant String
+DocumentService -> String: invoke dependency
+DocumentService --> User : return
+User -> DocumentService: getAllDocuments()
+DocumentService --> User : return
+User -> DocumentService: searchDocuments()
+DocumentService -> String: invoke dependency
+DocumentService --> User : return
+User -> DocumentService: lambdasearchDocuments2()
+participant ResultSet
+DocumentService -> ResultSet: invoke dependency
+DocumentService --> User : return
+User -> DocumentService: lambdagetAllDocuments1()
+DocumentService -> ResultSet: invoke dependency
+DocumentService --> User : return
+User -> DocumentService: lambdagetDocument0()
+DocumentService -> ResultSet: invoke dependency
+DocumentService --> User : return
+@enduml

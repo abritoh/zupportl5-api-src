@@ -1,0 +1,19 @@
+# -----------------------------
+# Configuration for Ggl App Eng
+# -----------------------------
+runtime: java17
+service: default
+instance_class: F2
+
+env_variables:
+  SPRING_PROFILES_ACTIVE: prod
+  DATASOURCE_PLATFORM: "projects/1097917279253/secrets/DATASOURCE_PLATFORM/versions/latest"
+  DATASOURCE_URL: "projects/1097917279253/secrets/DATASOURCE_URL/versions/latest"
+  DATASOURCE_USERNAME: "projects/1097917279253/secrets/DATASOURCE_USERNAME/versions/latest"
+  DATASOURCE_PSW: "projects/1097917279253/secrets/DATASOURCE_PSW/versions/latest"
+
+entrypoint: java -jar target/zupportL5-api-1.0.jar
+
+handlers:
+- url: /.*
+  script: auto

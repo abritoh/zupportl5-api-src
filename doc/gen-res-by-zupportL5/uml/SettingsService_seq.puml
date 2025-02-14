@@ -1,0 +1,37 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for SettingsService
+
+actor User
+User -> SettingsService: getAll()
+SettingsService --> User : return
+User -> SettingsService: getByKey()
+participant String
+SettingsService -> String: invoke dependency
+SettingsService --> User : return
+User -> SettingsService: save()
+participant Settings
+SettingsService -> Settings: invoke dependency
+SettingsService --> User : return
+User -> SettingsService: create()
+SettingsService -> Settings: invoke dependency
+SettingsService --> User : return
+User -> SettingsService: update()
+SettingsService -> String: invoke dependency
+SettingsService -> Settings: invoke dependency
+SettingsService --> User : return
+User -> SettingsService: deleteByKey()
+SettingsService -> String: invoke dependency
+SettingsService --> User : return
+User -> SettingsService: lambdaupdate1()
+SettingsService -> String: invoke dependency
+SettingsService --> User : return
+User -> SettingsService: lambdaupdate0()
+SettingsService -> Settings: invoke dependency
+SettingsService -> Settings: invoke dependency
+SettingsService --> User : return
+@enduml

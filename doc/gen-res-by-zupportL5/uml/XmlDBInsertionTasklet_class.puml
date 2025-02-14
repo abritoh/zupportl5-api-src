@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.component.XmlDBInsertionTasklet
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class XmlDBInsertionTasklet {
+ - org.slf4j.Logger logger
+ - javax.sql.DataSource dataSource
+ + org.springframework.batch.repeat.RepeatStatus (org.springframework.batch.core.StepContribution, org.springframework.batch.core.scope.context.ChunkContext) execute()
+ + org.apache.clusterbr.zupportl5.dto.MethodResult<java.lang.String> (org.apache.clusterbr.zupportl5.dto.xml.DocumentXml) insertIntoDatabase()
+ + boolean (java.lang.String, java.lang.String) areStepParameteresNotNull()
+}
+XmlDBInsertionTasklet ..|> orgspringframeworkbatchcoresteptaskletTasklet
+@enduml

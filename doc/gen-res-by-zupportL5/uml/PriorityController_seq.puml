@@ -1,0 +1,27 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for PriorityController
+
+actor User
+User -> PriorityController: getAll()
+PriorityController --> User : return
+User -> PriorityController: getById()
+participant Integer
+PriorityController -> Integer: invoke dependency
+PriorityController --> User : return
+User -> PriorityController: create()
+participant Priority
+PriorityController -> Priority: invoke dependency
+PriorityController --> User : return
+User -> PriorityController: update()
+PriorityController -> Integer: invoke dependency
+PriorityController -> Priority: invoke dependency
+PriorityController --> User : return
+User -> PriorityController: delete()
+PriorityController -> Integer: invoke dependency
+PriorityController --> User : return
+@enduml

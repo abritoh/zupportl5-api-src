@@ -1,0 +1,68 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for DropboxTokenService
+
+actor User
+User -> DropboxTokenService: init()
+DropboxTokenService --> User : return
+User -> DropboxTokenService: loadDropboxCredentials()
+DropboxTokenService --> User : return
+User -> DropboxTokenService: validateIfNullGetFromEnvironmentVars()
+participant String
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: getAuthorizationUrl()
+DropboxTokenService --> User : return
+User -> DropboxTokenService: getRefreshToken()
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: saveSettings()
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService -> String: invoke dependency
+participant Long
+DropboxTokenService -> Long: invoke dependency
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: getAccessTokenFromDBOrRequestNew()
+DropboxTokenService --> User : return
+User -> DropboxTokenService: isTokenExpired()
+participant Settings
+DropboxTokenService -> Settings: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: dropboxCredentialsAreValid()
+DropboxTokenService --> User : return
+User -> DropboxTokenService: getRefreshTokenFromDatabase()
+DropboxTokenService --> User : return
+User -> DropboxTokenService: getAccessTokenFromDatabase()
+DropboxTokenService --> User : return
+User -> DropboxTokenService: getTokenFromDatabase()
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: checkIfTokenIsValid()
+participant SettingsDto
+DropboxTokenService -> SettingsDto: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: decode()
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: lambdagetAuthorizationUrl3()
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: lambdagetAuthorizationUrl2()
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: lambdagetAuthorizationUrl1()
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService --> User : return
+User -> DropboxTokenService: lambdagetAuthorizationUrl0()
+DropboxTokenService -> String: invoke dependency
+DropboxTokenService --> User : return
+@enduml

@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.dto.xml.XmlHeader
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class XmlHeader {
+ - long serialVersionUID
+ - java.lang.String title
+ + java.lang.String () getTitle()
+ + void (java.lang.String) setTitle()
+ + java.lang.String () toString()
+}
+XmlHeader ..|> javaioSerializable
+@enduml

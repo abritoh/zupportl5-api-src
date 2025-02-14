@@ -1,0 +1,26 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.GenericServiceImpl
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class GenericServiceImpl {
+ - R repository
+ - org.apache.clusterbr.zupportl5.service.MessageService messageService
+ + java.util.List<T> () getAll()
+ + java.util.Optional<T> (ID) getById()
+ + T (T) create()
+ + T (ID, T) update()
+ + boolean (ID) deleteById()
+ + void (T, T) fillPropertiesOnUpdate()
+ + org.apache.clusterbr.zupportl5.exception.RestApiException (java.lang.Object) lambdaupdate1()
+ + java.lang.Object (java.lang.Object, java.lang.Object) lambdaupdate0()
+}
+GenericServiceImpl ..|> orgapacheclusterbrzupportl5genericGenericEntityService
+@enduml

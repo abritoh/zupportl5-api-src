@@ -1,0 +1,18 @@
+<document version="1.0">
+    <document-type>RB</document-type>
+    <category>IT Security|Management Procedures|Access Control|Access Control Runbook</category>
+    <xmlheader>
+        <title>Access Control Runbook</title>
+    </xmlheader>
+    <xmlcontent>
+        <steps>
+            <step>1. Define user roles and permissions based on job functions.</step>
+            <step>2. Implement multi-factor authentication (MFA).</step>
+            <step>3. Regularly review and update access control policies.</step>
+            <step>4. Monitor access logs for unusual activities.</step>
+            <step>5. Conduct periodic access reviews and audits.</step>
+            <step>6. Provide access control training for all employees.</step>
+            <step>7. Document access control procedures and changes.</step>
+        </steps>
+    </xmlcontent>
+</document>

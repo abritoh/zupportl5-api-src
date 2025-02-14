@@ -1,0 +1,27 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.processor.OpenApiJsonDocGenerator
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class OpenApiJsonDocGenerator {
+ - org.slf4j.Logger logger
+ + void () generateOpenAPIJsonDocs()
+ + java.util.Set<java.lang.Class<?>> (java.lang.String) scanForControllerClasses()
+ + java.util.Map<java.lang.String, java.lang.Object> (java.util.Set<java.lang.Class<?>>) extractSwaggerPaths()
+ + java.lang.String (java.lang.Class<?>) getClassLevelPath()
+ + java.lang.String (java.lang.String, java.lang.String) combinePaths()
+ + java.util.Map<java.lang.String, java.lang.Object> (java.lang.reflect.Method) createMethodDetails()
+ + java.util.List<java.util.Map<java.lang.String, java.lang.Object>> (java.lang.reflect.Method) extractParameters()
+ + java.util.Map<java.lang.String, java.lang.Object> (java.lang.reflect.Method) createResponseSchemas()
+ + java.lang.String (java.lang.Object) convertToJson()
+ + java.lang.Object (java.lang.String) lambdaextractSwaggerPaths0()
+}
+OpenApiJsonDocGenerator --|> orgapacheclusterbrzupportl5processorOpenApiDocGeneratorBase
+@enduml

@@ -1,0 +1,86 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class HttpStatusCodeEnum {
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum InvalidStatus
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Continue
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum SwitchingProtocol
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Processing
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum EarlyHints
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum OK
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Created
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Accepted
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum NonAuthoritativeInformation
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum NoContent
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum ResetContent
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum PartialContent
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum MultiStatus
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum AlreadyReported
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum IMUsed
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum MultipleChoice
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum MovedPermanently
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Found
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum SeeOther
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum NotModified
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum UseProxy
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Unused
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum TemporaryRedirect
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum PermanentRedirect
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum BadRequest
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Unauthorized
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum PaymentRequired
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Forbidden
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum NotFound
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum MethodNotAllowed
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum NotAcceptable
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum ProxyAuthenticationRequired
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum RequestTimeout
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Conflict
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum Gone
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum LengthRequired
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum PreconditionFailed
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum PayloadTooLarge
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum URITooLong
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum UnsupportedMediaType
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum RangeNotSatisfiable
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum ExpectationFailed
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum ImaTeapot
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum MisdirectedRequest
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum TooEarly
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum UpgradeRequired
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum PreconditionRequired
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum TooManyRequests
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum RequestHeaderFieldsTooLarge
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum UnavailableForLegalReasons
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum InternalServerError
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum NotImplemented
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum BadGateway
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum ServiceUnavailable
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum GatewayTimeout
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum HTTPVersionNotSupported
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum VariantAlsoNegotiates
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum InsufficientStorage
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum LoopDetected
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum NotExtended
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum NetworkAuthenticationRequired
+ - int code
+ - org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum[] VALUES
+ + org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum[] () values()
+ + org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum (java.lang.String) valueOf()
+ + int () getCode()
+ + int () value()
+ + org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum (int) fromCode()
+ + org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum () getDefault()
+ + org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum[] () values()
+}
+HttpStatusCodeEnum --|> javalangEnum
+@enduml

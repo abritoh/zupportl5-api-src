@@ -1,0 +1,24 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.TeamService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class TeamService {
+ - org.apache.clusterbr.zupportl5.repository.TeamRepository repository
+ - org.apache.clusterbr.zupportl5.service.MessageService msgService
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Team> () getAll()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Team> (java.lang.Integer) getById()
+ + org.apache.clusterbr.zupportl5.entity.Team (org.apache.clusterbr.zupportl5.entity.Team) create()
+ + org.apache.clusterbr.zupportl5.entity.Team (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.Team) update()
+ + boolean (java.lang.Long) deleteById()
+ + org.apache.clusterbr.zupportl5.exception.RestApiException (java.lang.Integer) lambdaupdate1()
+ + org.apache.clusterbr.zupportl5.entity.Team (org.apache.clusterbr.zupportl5.entity.Team, org.apache.clusterbr.zupportl5.entity.Team) lambdaupdate0()
+}
+@enduml

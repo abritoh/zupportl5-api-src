@@ -1,0 +1,23 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.DocumentService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class DocumentService {
+ - org.springframework.jdbc.core.JdbcTemplate jdbcTemplate
+ - org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate namedParameterJdbcTemplate
+ + java.util.List<org.apache.clusterbr.zupportl5.dto.DocumentDto> (java.lang.String) getDocument()
+ + java.util.List<org.apache.clusterbr.zupportl5.dto.DocumentDto> (int) getAllDocuments()
+ + java.util.List<org.apache.clusterbr.zupportl5.dto.DocumentDto> (java.lang.String) searchDocuments()
+ + org.apache.clusterbr.zupportl5.dto.DocumentDto (java.sql.ResultSet, int) lambdasearchDocuments2()
+ + org.apache.clusterbr.zupportl5.dto.DocumentDto (java.sql.ResultSet, int) lambdagetAllDocuments1()
+ + org.apache.clusterbr.zupportl5.dto.DocumentDto (java.sql.ResultSet, int) lambdagetDocument0()
+}
+@enduml

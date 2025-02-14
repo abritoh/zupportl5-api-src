@@ -1,0 +1,34 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for PerformanceMetricService
+
+actor User
+User -> PerformanceMetricService: getAll()
+PerformanceMetricService --> User : return
+User -> PerformanceMetricService: getById()
+participant Integer
+PerformanceMetricService -> Integer: invoke dependency
+PerformanceMetricService --> User : return
+User -> PerformanceMetricService: create()
+participant PerformanceMetric
+PerformanceMetricService -> PerformanceMetric: invoke dependency
+PerformanceMetricService --> User : return
+User -> PerformanceMetricService: update()
+PerformanceMetricService -> Integer: invoke dependency
+PerformanceMetricService -> PerformanceMetric: invoke dependency
+PerformanceMetricService --> User : return
+User -> PerformanceMetricService: deleteById()
+PerformanceMetricService -> Integer: invoke dependency
+PerformanceMetricService --> User : return
+User -> PerformanceMetricService: lambdaupdate1()
+PerformanceMetricService -> Integer: invoke dependency
+PerformanceMetricService --> User : return
+User -> PerformanceMetricService: lambdaupdate0()
+PerformanceMetricService -> PerformanceMetric: invoke dependency
+PerformanceMetricService -> PerformanceMetric: invoke dependency
+PerformanceMetricService --> User : return
+@enduml

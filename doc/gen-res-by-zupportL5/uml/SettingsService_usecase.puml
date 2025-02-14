@@ -1,0 +1,23 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for SettingsService
+
+actor User
+usecase "getAll" as UC_getAll
+User --> UC_getAll
+usecase "getByKey" as UC_getByKey
+User --> UC_getByKey
+usecase "save" as UC_save
+User --> UC_save
+usecase "create" as UC_create
+User --> UC_create
+usecase "update" as UC_update
+User --> UC_update
+usecase "deleteByKey" as UC_deleteByKey
+User --> UC_deleteByKey
+@enduml

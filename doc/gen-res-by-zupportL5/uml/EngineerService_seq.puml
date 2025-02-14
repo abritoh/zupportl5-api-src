@@ -1,0 +1,50 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for EngineerService
+
+actor User
+User -> EngineerService: findAll()
+EngineerService --> User : return
+User -> EngineerService: getById()
+participant Long
+EngineerService -> Long: invoke dependency
+EngineerService --> User : return
+User -> EngineerService: getByEmail()
+participant String
+EngineerService -> String: invoke dependency
+EngineerService --> User : return
+User -> EngineerService: save()
+participant Engineer
+EngineerService -> Engineer: invoke dependency
+EngineerService --> User : return
+User -> EngineerService: update()
+EngineerService -> Long: invoke dependency
+EngineerService -> Engineer: invoke dependency
+EngineerService --> User : return
+User -> EngineerService: partialUpdate()
+EngineerService -> Long: invoke dependency
+participant Object
+EngineerService -> Object: invoke dependency
+EngineerService --> User : return
+User -> EngineerService: deleteById()
+EngineerService -> Long: invoke dependency
+EngineerService --> User : return
+User -> EngineerService: lambdapartialUpdate2()
+participant Map
+EngineerService -> Map: invoke dependency
+EngineerService -> Engineer: invoke dependency
+EngineerService --> User : return
+User -> EngineerService: lambdapartialUpdate1()
+EngineerService -> Engineer: invoke dependency
+EngineerService -> String: invoke dependency
+EngineerService -> Object: invoke dependency
+EngineerService --> User : return
+User -> EngineerService: lambdaupdate0()
+EngineerService -> Engineer: invoke dependency
+EngineerService -> Engineer: invoke dependency
+EngineerService --> User : return
+@enduml

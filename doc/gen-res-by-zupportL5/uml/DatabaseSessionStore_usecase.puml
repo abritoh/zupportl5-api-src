@@ -1,0 +1,25 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for DatabaseSessionStore
+
+actor User
+usecase "get" as UC_get
+User --> UC_get
+usecase "set" as UC_set
+User --> UC_set
+usecase "clear" as UC_clear
+User --> UC_clear
+usecase "setThreadLocalRequestId" as UC_setThreadLocalRequestId
+User --> UC_setThreadLocalRequestId
+usecase "get" as UC_get
+User --> UC_get
+usecase "set" as UC_set
+User --> UC_set
+usecase "clear" as UC_clear
+User --> UC_clear
+@enduml

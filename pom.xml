@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.11</version>
+    <relativePath />
+  </parent>
+
+  <!-- @author arcebrito@gmail.com | 2024-nov -->
+  <groupId>org.apache.clusterbr</groupId>
+  <artifactId>zupportL5-api</artifactId>
+  <version>1.0</version>
+
+  <name>zupportL5-api</name>
+  <url>https://github.com/abritoh/zupportl5-api</url>
+  <description>Elevating Support Engineering to the Next Level | Simplifying Resolutions.</description>
+  <developers>
+    <developer>
+      <email>arcbrth@gmail.com</email>
+    </developer>
+  </developers>
+  <organization>
+    <name>ClusterBR</name>
+  </organization>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>17</maven.compiler.release>
+    <project.application.title>${project.artifactId}</project.application.title>
+    <project.application.version>${project.version}</project.application.version>
+    <project.SkipJavadocProcessor>true</project.SkipJavadocProcessor>
+    <project.SkipSurefireTests>true</project.SkipSurefireTests>
+    <gcp.project.id>zupportl5</gcp.project.id>
+    <gcp.project.number>1097917279253</gcp.project.number>
+    <gcp.ap.engine.service.account>zupportl5@appspot.gserviceaccount.com</gcp.ap.engine.service.account>
+    <gcp.github.service.account>github-actions-deploy@zupportl5.iam.gserviceaccount.com</gcp.github.service.account>
+  </properties>
+
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <!-- takes the value from system ENV-VAR: DATASOURCE_PASSWORD 
+             usage: mvn clean install -P dev -->
+        <application_db_psw_dev>${env.DATASOURCE_PASSWORD}</application_db_psw_dev>
+      </properties>
+    </profile>
+    <profile>
+      <id>devgcp</id>
+      <properties>
+        <!-- takes the value from system ENV-VAR: DATASOURCE_PASSWORD 
+             usage: mvn clean install -P devgcp -->
+        <application_db_psw_devgcp>${env.DATASOURCE_PASSWORD}</application_db_psw_devgcp>
+      </properties>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <properties>
+        <!-- takes the value from mvn command line parameter: db_psw
+             usage: mvn clean package -P prod -Ddb_psw=$DATASOURCE_PASSWORD -->
+        <!--<application_db_psw_prod>${db_psw}</application_db_psw_prod>-->
+        <!-- usage: mvn clean install -P prod -->
+        <application_db_psw_prod>${env.DATASOURCE_PASSWORD}</application_db_psw_prod>
+      </properties>
+    </profile>
+  </profiles>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>5.11.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-undertow</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-logging</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-batch</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>8.3.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-secretmanager</artifactId>
+        <version>2.19.0</version> 
+    </dependency>    
+    
+    <dependency>
+      <groupId>com.dropbox.core</groupId>
+      <artifactId>dropbox-core-sdk</artifactId>
+      <version>7.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-oxm</artifactId>
+      <version>6.1.14</version>
+    </dependency>
+
+    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jaxb</groupId>
+      <artifactId>jaxb-runtime</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.github.classgraph</groupId>
+      <artifactId>classgraph</artifactId>
+      <version>4.8.157</version>
+    </dependency>
+    <dependency>
+      <groupId>guru.nidi</groupId>
+      <artifactId>graphviz-java</artifactId>
+      <version>0.18.1</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.plantuml</groupId>
+      <artifactId>plantuml</artifactId>
+      <version>1.2023.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>5.5.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.micrometer</groupId>
+      <artifactId>micrometer-registry-prometheus</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>jdepend</groupId>
+      <artifactId>jdepend</artifactId>
+      <version>2.9.1</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.txt</include>
+          <include>**/*.sql</include>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/resources/messages</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+    </resources>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.4.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.3.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.13.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.3.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.4.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.12.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.6.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Main-Class>org.apache.clusterbr.Zupportl5Application</Main-Class>
+            </manifestEntries>
+          </archive>
+          <maven.compiler.fork>true</maven.compiler.fork>
+          <argsLine>-Xms512m -Xmx2048m</argsLine>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>3.1.1</version>
+        <configuration>
+          <mainClass>org.apache.clusterbr.Zupportl5Application</mainClass>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <includes>
+            <include>**/*Test.java</include>
+          </includes>
+          <forkCount>1</forkCount>
+          <reuseForks>true</reuseForks>
+          <skipTests>${project.SkipSurefireTests}</skipTests>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </plugin>
+
+      <!-- exec-maven-plugin for UML Generation and javadoc-comments-insertion -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+
+          <execution>
+            <id>exec-uml-generation</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <configuration>
+              <mainClass>org.apache.clusterbr.zupportl5.processor.UMLGenerator</mainClass>
+              <classpathScope>compile</classpathScope>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>exec-javadoc-processor</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <configuration>
+              <mainClass>org.apache.clusterbr.zupportl5.processor.JavadocProcessor</mainClass>
+              <classpathScope>compile</classpathScope>
+              <skip>${project.SkipJavadocProcessor}</skip>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>generate-metrics-report</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <configuration>
+              <mainClass>org.apache.clusterbr.zupportl5.processor.ZupportL5Processor</mainClass>
+              <classpathScope>compile</classpathScope>
+            </configuration>
+          </execution>
+
+          <!-- execution during process-classes: 1 -->
+          <execution>
+            <id>execute-app-tree-file-info-1</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <configuration>
+              <mainClass>org.apache.clusterbr.zupportl5.processor.SystemTreeFileExecutor</mainClass>
+              <classpathScope>compile</classpathScope>
+              <arguments>
+                <argument>${project.build.directory}/classes/static/public/ZupportL5-api-tree-file_source_loc.txt</argument>
+              </arguments>
+            </configuration>
+          </execution>
+
+          <!-- execution during process-classes: 2 -->
+          <execution>
+            <id>execute-app-tree-file-info-2</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <configuration>
+              <mainClass>org.apache.clusterbr.zupportl5.processor.SystemTreeFileExecutor</mainClass>
+              <classpathScope>compile</classpathScope>
+              <arguments>
+                <argument>${project.build.directory}/classes/static/public/ZupportL5-api-tree-file_build_loc.txt</argument>
+              </arguments>
+            </configuration>
+          </execution>          
+
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.6.1</version>
+        <executions>
+          <execution>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>tree</goal>
+            </goals>
+            <configuration>
+              <outputFile>
+                ${project.build.directory}/classes/static/public/ZupportL5-api-dependency-tree.txt</outputFile>
+              <outputType>dot</outputType>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-static-resources</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/classes/static</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src/main/resources/static</directory>
+                  <includes>
+                    <include>**/*</include>
+                  </includes>
+                  <filtering>false</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-plantuml-images-to-apidocs</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>
+                ${project.build.directory}/reports/apidocs/generated-resources/uml/images
+              </outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.build.directory}/generated-resources/uml/images</directory>
+                  <includes>
+                    <include>**/*.png</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-plantuml-images-to-testapidocs</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>
+                ${project.build.directory}/reports/testapidocs/generated-resources/uml/images
+              </outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.build.directory}/generated-resources/uml/images</directory>
+                  <includes>
+                    <include>**/*Test.png</include>
+                    <include>**/*TestBase.png</include>
+                    <include>**/*TestHelper.png</include>
+                    <include>**/*TestUtil.png</include>
+                    <include>**/*TestConfig.png</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- maven-javadoc-plugin to generate the Javadocs after the diagrams are inserted -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.11.1</version>
+        <executions>
+          <execution>
+            <id>exec-1st-generate-javadocs</id>
+            <phase>package</phase>
+            <goals>
+              <goal>javadoc</goal>
+            </goals>
+            <configuration>
+              <doctitle>Main Code Documentation</doctitle>
+              <sourcepath>${project.basedir}/src/main/java;</sourcepath>
+              <failOnError>false</failOnError>
+              <doclint>all,-missing</doclint>
+              <additionalJOption>-Xdoclint:none</additionalJOption>
+            </configuration>
+          </execution>
+          <execution>
+            <id>exec-2nd-generate-test-javadocs-</id>
+            <phase>package</phase>
+            <goals>
+              <goal>test-javadoc</goal>
+            </goals>
+            <configuration>
+              <doctitle>Test Code Documentation</doctitle>
+              <sourcepath>${project.basedir}/src/test/java</sourcepath>
+              <failOnError>false</failOnError>
+              <doclint>all,-missing</doclint>
+              <additionalJOption>-Xdoclint:none</additionalJOption>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

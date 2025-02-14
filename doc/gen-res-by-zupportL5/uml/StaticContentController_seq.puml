@@ -1,0 +1,14 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for StaticContentController
+
+actor User
+User -> StaticContentController: root()
+StaticContentController --> User : return
+User -> StaticContentController: about()
+StaticContentController --> User : return
+@enduml

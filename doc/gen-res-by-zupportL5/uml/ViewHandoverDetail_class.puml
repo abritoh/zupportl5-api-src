@@ -1,0 +1,44 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.ViewHandoverDetail
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class ViewHandoverDetail {
+ - java.lang.Integer id
+ - java.time.LocalDateTime handoverTime
+ - java.lang.String incidentTitle
+ - java.lang.String incidentDescription
+ - java.lang.String statusName
+ - java.lang.String priorityName
+ - java.lang.String fromEngineerName
+ - java.lang.String toEngineerName
+ - java.lang.String notes
+ - java.lang.String toEngineerEmail
+ - java.lang.String fromEngineerEmail
+ + java.lang.Integer () getId()
+ + void (java.lang.Integer) setId()
+ + java.time.LocalDateTime () getHandoverTime()
+ + void (java.time.LocalDateTime) setHandoverTime()
+ + java.lang.String () getIncidentTitle()
+ + void (java.lang.String) setIncidentTitle()
+ + java.lang.String () getIncidentDescription()
+ + void (java.lang.String) setIncidentDescription()
+ + java.lang.String () getFromEngineerName()
+ + void (java.lang.String) setFromEngineerName()
+ + java.lang.String () getFromEngineerEmail()
+ + void (java.lang.String) setFromEngineerEmail()
+ + java.lang.String () getToEngineerName()
+ + void (java.lang.String) setToEngineerName()
+ + java.lang.String () getToEngineerEmail()
+ + void (java.lang.String) setToEngineerEmail()
+ + java.lang.String () getNotes()
+ + void (java.lang.String) setNotes()
+}
+@enduml

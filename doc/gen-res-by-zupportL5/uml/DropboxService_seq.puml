@@ -1,0 +1,40 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for DropboxService
+
+actor User
+User -> DropboxService: createDropboxClient()
+DropboxService --> User : return
+User -> DropboxService: getFileNames()
+participant String
+DropboxService -> String: invoke dependency
+DropboxService --> User : return
+User -> DropboxService: downloadFile()
+DropboxService -> String: invoke dependency
+DropboxService -> String: invoke dependency
+DropboxService --> User : return
+User -> DropboxService: uploadFile()
+participant MultipartFile
+DropboxService -> MultipartFile: invoke dependency
+DropboxService --> User : return
+User -> DropboxService: uploadFile()
+DropboxService -> MultipartFile: invoke dependency
+DropboxService --> User : return
+User -> DropboxService: uploadFile()
+DropboxService -> String: invoke dependency
+DropboxService -> String: invoke dependency
+DropboxService --> User : return
+User -> DropboxService: uploadFile()
+participant InputStream
+DropboxService -> InputStream: invoke dependency
+DropboxService -> String: invoke dependency
+DropboxService --> User : return
+User -> DropboxService: getExceptionMessageOrDefault()
+participant Exception
+DropboxService -> Exception: invoke dependency
+DropboxService --> User : return
+@enduml

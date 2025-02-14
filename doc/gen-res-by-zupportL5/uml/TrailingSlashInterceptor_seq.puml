@@ -1,0 +1,18 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for TrailingSlashInterceptor
+
+actor User
+User -> TrailingSlashInterceptor: preHandle()
+participant HttpServletRequest
+TrailingSlashInterceptor -> HttpServletRequest: invoke dependency
+participant HttpServletResponse
+TrailingSlashInterceptor -> HttpServletResponse: invoke dependency
+participant Object
+TrailingSlashInterceptor -> Object: invoke dependency
+TrailingSlashInterceptor --> User : return
+@enduml

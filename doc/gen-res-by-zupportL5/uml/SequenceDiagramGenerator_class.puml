@@ -1,0 +1,18 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.processor.SequenceDiagramGenerator
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class SequenceDiagramGenerator {
+ + void () generate()
+ + void (java.lang.StringBuilder, io.github.classgraph.ClassInfo, java.util.Set, io.github.classgraph.MethodInfo) lambdagenerate0()
+}
+SequenceDiagramGenerator --|> orgapacheclusterbrzupportl5processorDiagramGeneratorBase
+@enduml

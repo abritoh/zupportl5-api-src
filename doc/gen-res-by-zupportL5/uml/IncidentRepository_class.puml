@@ -1,0 +1,25 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.repository.IncidentRepository
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class IncidentRepository {
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Incident> (java.lang.String, java.lang.String, java.lang.String) findByCriteria()
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Incident> (java.lang.String, java.lang.String, java.lang.String) findByCriteriaWithCriteriaAPI()
+}
+IncidentRepository ..|> orgspringframeworkdatajparepositoryJpaRepository
+IncidentRepository ..|> orgapacheclusterbrzupportl5repositoryIncidentRepositoryCriteria
+IncidentRepository ..|> orgspringframeworkdatarepositoryListCrudRepository
+IncidentRepository ..|> orgspringframeworkdatarepositoryListPagingAndSortingRepository
+IncidentRepository ..|> orgspringframeworkdatarepositoryqueryQueryByExampleExecutor
+IncidentRepository ..|> orgspringframeworkdatarepositoryCrudRepository
+IncidentRepository ..|> orgspringframeworkdatarepositoryPagingAndSortingRepository
+IncidentRepository ..|> orgspringframeworkdatarepositoryRepository
+@enduml

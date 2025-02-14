@@ -1,0 +1,24 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.processor.JavadocProcessor
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class JavadocProcessor {
+ - org.slf4j.Logger logger
+ + void (java.lang.String[]) main()
+ + void (java.nio.file.Path, boolean, org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder, org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder) processFile()
+ + org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder (org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder, org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder, org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder, org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder) constructJavadocComments()
+ + org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder (java.lang.String) generateRestAPIComments()
+ + org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder (java.lang.String) generateDiagramComments()
+ + void (org.apache.clusterbr.zupportl5.processor.JavadocProcessor, org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder, org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder, java.nio.file.Path) lambdamain1()
+ + boolean (java.nio.file.Path) lambdamain0()
+}
+JavadocProcessor --|> orgapacheclusterbrzupportl5processorJavadocProcessorBase
+@enduml

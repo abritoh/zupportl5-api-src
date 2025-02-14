@@ -1,0 +1,20 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for HtmlSwaggerDocGenerator
+
+actor User
+User -> HtmlSwaggerDocGenerator: generateSwaggerDocs()
+HtmlSwaggerDocGenerator --> User : return
+User -> HtmlSwaggerDocGenerator: generateMethodHtml()
+participant Method
+HtmlSwaggerDocGenerator -> Method: invoke dependency
+participant String
+HtmlSwaggerDocGenerator -> String: invoke dependency
+HtmlSwaggerDocGenerator -> String: invoke dependency
+HtmlSwaggerDocGenerator -> String: invoke dependency
+HtmlSwaggerDocGenerator --> User : return
+@enduml

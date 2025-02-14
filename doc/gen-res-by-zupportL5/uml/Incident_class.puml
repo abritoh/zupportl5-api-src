@@ -1,0 +1,42 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.Incident
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class Incident {
+ - java.lang.Integer id
+ - java.lang.String title
+ - java.lang.String description
+ - org.apache.clusterbr.zupportl5.entity.Status statusID
+ - org.apache.clusterbr.zupportl5.entity.Priority priorityID
+ - org.apache.clusterbr.zupportl5.entity.Priority teamID
+ - java.sql.Timestamp createdAt
+ - java.sql.Timestamp updatedAt
+ - java.sql.Timestamp resolvedAt
+ + java.lang.Integer () getId()
+ + void (java.lang.Integer) setId()
+ + java.lang.String () getTitle()
+ + void (java.lang.String) setTitle()
+ + java.lang.String () getDescription()
+ + void (java.lang.String) setDescription()
+ + org.apache.clusterbr.zupportl5.entity.Status () getStatusID()
+ + void (org.apache.clusterbr.zupportl5.entity.Status) setStatusID()
+ + org.apache.clusterbr.zupportl5.entity.Priority () getPriorityID()
+ + void (org.apache.clusterbr.zupportl5.entity.Priority) setPriorityID()
+ + org.apache.clusterbr.zupportl5.entity.Priority () getTeamID()
+ + void (org.apache.clusterbr.zupportl5.entity.Priority) setTeamID()
+ + java.sql.Timestamp () getCreatedAt()
+ + void (java.sql.Timestamp) setCreatedAt()
+ + java.sql.Timestamp () getUpdatedAt()
+ + void (java.sql.Timestamp) setUpdatedAt()
+ + java.sql.Timestamp () getResolved_at()
+ + void (java.sql.Timestamp) setResolved_at()
+}
+@enduml

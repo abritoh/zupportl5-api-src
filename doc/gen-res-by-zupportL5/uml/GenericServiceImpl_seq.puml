@@ -1,0 +1,30 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for GenericServiceImpl
+
+actor User
+User -> GenericServiceImpl: getAll()
+GenericServiceImpl --> User : return
+User -> GenericServiceImpl: getById()
+GenericServiceImpl --> User : return
+User -> GenericServiceImpl: create()
+GenericServiceImpl --> User : return
+User -> GenericServiceImpl: update()
+GenericServiceImpl --> User : return
+User -> GenericServiceImpl: deleteById()
+GenericServiceImpl --> User : return
+User -> GenericServiceImpl: fillPropertiesOnUpdate()
+GenericServiceImpl --> User : return
+User -> GenericServiceImpl: lambdaupdate1()
+participant Object
+GenericServiceImpl -> Object: invoke dependency
+GenericServiceImpl --> User : return
+User -> GenericServiceImpl: lambdaupdate0()
+GenericServiceImpl -> Object: invoke dependency
+GenericServiceImpl -> Object: invoke dependency
+GenericServiceImpl --> User : return
+@enduml

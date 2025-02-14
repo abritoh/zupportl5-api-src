@@ -1,0 +1,21 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for XmlValidationTasklet
+
+actor User
+User -> XmlValidationTasklet: execute()
+participant StepContribution
+XmlValidationTasklet -> StepContribution: invoke dependency
+participant ChunkContext
+XmlValidationTasklet -> ChunkContext: invoke dependency
+XmlValidationTasklet --> User : return
+User -> XmlValidationTasklet: areStepParameteresNotNull()
+participant String
+XmlValidationTasklet -> String: invoke dependency
+XmlValidationTasklet -> String: invoke dependency
+XmlValidationTasklet --> User : return
+@enduml

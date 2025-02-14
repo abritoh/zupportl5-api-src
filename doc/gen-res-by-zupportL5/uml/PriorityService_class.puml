@@ -1,0 +1,24 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.PriorityService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class PriorityService {
+ - org.apache.clusterbr.zupportl5.repository.PriorityRepository repository
+ - org.apache.clusterbr.zupportl5.service.MessageService msgService
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Priority> () getAll()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Priority> (java.lang.Integer) getById()
+ + org.apache.clusterbr.zupportl5.entity.Priority (org.apache.clusterbr.zupportl5.entity.Priority) create()
+ + org.apache.clusterbr.zupportl5.entity.Priority (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.Priority) update()
+ + boolean (java.lang.Integer) deleteById()
+ + org.apache.clusterbr.zupportl5.exception.RestApiException (java.lang.Integer) lambdaupdate1()
+ + org.apache.clusterbr.zupportl5.entity.Priority (org.apache.clusterbr.zupportl5.entity.Priority, org.apache.clusterbr.zupportl5.entity.Priority) lambdaupdate0()
+}
+@enduml

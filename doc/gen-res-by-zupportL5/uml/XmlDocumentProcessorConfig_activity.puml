@@ -1,0 +1,24 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for XmlDocumentProcessorConfig
+
+if (xmlProcessorJob) then (yes)
+:xmlProcessorJob;
+endif
+if (xmlValidationStep) then (yes)
+:xmlValidationStep;
+endif
+if (xmlDropboxUploadStep) then (yes)
+:xmlDropboxUploadStep;
+endif
+if (xmlDBInsertionStep) then (yes)
+:xmlDBInsertionStep;
+endif
+stop
+@enduml

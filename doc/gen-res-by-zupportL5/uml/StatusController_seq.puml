@@ -1,0 +1,27 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for StatusController
+
+actor User
+User -> StatusController: getAll()
+StatusController --> User : return
+User -> StatusController: getById()
+participant Integer
+StatusController -> Integer: invoke dependency
+StatusController --> User : return
+User -> StatusController: create()
+participant Status
+StatusController -> Status: invoke dependency
+StatusController --> User : return
+User -> StatusController: update()
+StatusController -> Integer: invoke dependency
+StatusController -> Status: invoke dependency
+StatusController --> User : return
+User -> StatusController: delete()
+StatusController -> Integer: invoke dependency
+StatusController --> User : return
+@enduml

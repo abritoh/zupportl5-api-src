@@ -1,0 +1,36 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for DropboxService
+
+if (createDropboxClient) then (yes)
+:createDropboxClient;
+endif
+if (getFileNames) then (yes)
+:getFileNames;
+endif
+if (downloadFile) then (yes)
+:downloadFile;
+endif
+if (uploadFile) then (yes)
+:uploadFile;
+endif
+if (uploadFile) then (yes)
+:uploadFile;
+endif
+if (uploadFile) then (yes)
+:uploadFile;
+endif
+if (uploadFile) then (yes)
+:uploadFile;
+endif
+if (getExceptionMessageOrDefault) then (yes)
+:getExceptionMessageOrDefault;
+endif
+stop
+@enduml

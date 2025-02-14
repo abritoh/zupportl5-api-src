@@ -1,0 +1,30 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.dto.MethodResult
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class MethodResult {
+ - T item
+ - java.lang.Integer code
+ - java.lang.Boolean success
+ - java.util.List<java.lang.String> messageList
+ + java.lang.Integer () getCode()
+ + void (java.lang.Integer) setCode()
+ + void (org.apache.clusterbr.zupportl5.enums.HttpStatusCodeEnum) setCode()
+ + java.lang.Boolean () getSuccess()
+ + void (java.lang.Boolean) setSuccess()
+ + T () getItem()
+ + void (T) setItem()
+ + java.util.List<java.lang.String> () getMessageList()
+ + void (java.util.List<java.lang.String>) setMessageList()
+ + java.lang.String () toString()
+}
+MethodResult ..|> javaioSerializable
+@enduml

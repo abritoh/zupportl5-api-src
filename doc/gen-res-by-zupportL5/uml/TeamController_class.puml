@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.TeamController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class TeamController {
+ - org.apache.clusterbr.zupportl5.service.TeamService service
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Team> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Team> (java.lang.Integer) getById()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Team> (org.apache.clusterbr.zupportl5.entity.Team) create()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Team> (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.Team) update()
+ + org.springframework.http.ResponseEntity<java.lang.Void> (java.lang.Integer) delete()
+}
+@enduml

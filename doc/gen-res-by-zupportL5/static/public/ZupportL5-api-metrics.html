@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- By ClusterBR (arcbrth@gmail.com) | 2024-1129 | Compiled and deployed implementing MS-GitHub Wfs | Running on google-app-engine -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/metrics.css">    
+    <title>ZupportL5-API Dependency Metrics</title>    
+</head>
+<body>
+    <h1>Project Dependency Metrics for ZupportL5-API</h1>
+
+    <table><thead><tr><th>#</th> <th>Package</th> <th>Classes</th> <th>Abstract Classes</th> <th>Afferent Couplings (Ca)</th><th>Efferent Couplings (Ce)</th> <th>Instability (I)</th> <th>Cycles</th></tr></thead><tbody><tr><td>1</td><td>org.apache.clusterbr.zupportl5.service</td><td>7</td><td>0</td><td>2</td><td>8</td><td>0.80</td><td>Cycle detected</td></tr><tr><td>2</td><td>org.apache.clusterbr.zupportl5.dto.xml</td><td>4</td><td>0</td><td>1</td><td>6</td><td>0.86</td><td>Cycle detected</td></tr><tr><td>3</td><td>org.apache.clusterbr.zupportl5.processor</td><td>11</td><td>1</td><td>0</td><td>12</td><td>1.00</td><td>Cycle detected</td></tr><tr><td>4</td><td>org.apache.clusterbr.zupportl5.mapper</td><td>1</td><td>0</td><td>0</td><td>3</td><td>1.00</td><td>Cycle detected</td></tr><tr><td>5</td><td>org.apache.clusterbr.zupportl5.entity</td><td>16</td><td>0</td><td>3</td><td>4</td><td>0.57</td><td>Cycle detected</td></tr><tr><td>6</td><td>org.apache.clusterbr.zupportl5.component</td><td>5</td><td>0</td><td>1</td><td>20</td><td>0.95</td><td>Cycle detected</td></tr><tr><td>7</td><td>org.apache.clusterbr</td><td>1</td><td>0</td><td>0</td><td>4</td><td>1.00</td><td>No cycle</td></tr><tr><td>8</td><td>org.apache.clusterbr.zupportl5.service.dropbox</td><td>1</td><td>0</td><td>1</td><td>10</td><td>0.91</td><td>Cycle detected</td></tr><tr><td>9</td><td>org.apache.clusterbr.zupportl5.repository</td><td>18</td><td>17</td><td>1</td><td>6</td><td>0.86</td><td>Cycle detected</td></tr><tr><td>10</td><td>org.apache.clusterbr.zupportl5.utils</td><td>8</td><td>1</td><td>8</td><td>18</td><td>0.69</td><td>Cycle detected</td></tr><tr><td>11</td><td>org.apache.clusterbr.zupportl5.enums</td><td>1</td><td>0</td><td>3</td><td>1</td><td>0.25</td><td>No cycle</td></tr><tr><td>12</td><td>org.apache.clusterbr.zupportl5.annotations</td><td>3</td><td>3</td><td>0</td><td>2</td><td>1.00</td><td>No cycle</td></tr><tr><td>13</td><td>org.apache.clusterbr.zupportl5.config.batch</td><td>1</td><td>0</td><td>0</td><td>8</td><td>1.00</td><td>Cycle detected</td></tr><tr><td>14</td><td>org.apache.clusterbr.zupportl5.exception</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1.00</td><td>Cycle detected</td></tr><tr><td>15</td><td>org.apache.clusterbr.zupportl5.controller</td><td>3</td><td>0</td><td>0</td><td>14</td><td>1.00</td><td>Cycle detected</td></tr><tr><td>16</td><td>org.apache.clusterbr.zupportl5.generic</td><td>1</td><td>1</td><td>0</td><td>2</td><td>1.00</td><td>No cycle</td></tr><tr><td>17</td><td>org.apache.clusterbr.zupportl5.config</td><td>4</td><td>0</td><td>0</td><td>11</td><td>1.00</td><td>Cycle detected</td></tr><tr><td>18</td><td>org.apache.clusterbr.zupportl5.dto</td><td>4</td><td>0</td><td>5</td><td>6</td><td>0.55</td><td>Cycle detected</td></tr><tr><td>19</td><td>org.apache.clusterbr.zupportl5.interceptor</td><td>2</td><td>0</td><td>1</td><td>6</td><td>0.86</td><td>No cycle</td></tr></tbody></table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <h2>Summary</h2>
+                    <ul>
+                        <li>Total Packages: 19</li>
+                        <li>Total Classes: 92</li>
+                        <li>Total Abstract Classes / Interfaces: 23</li>                        
+                        <li>Total Methods: 353</li>
+                        <li>Total Lines of Code: 4910</li>
+                    </ul>
+                    <h2>Metric Explanation</h2>
+                    <ul>
+                        <li>
+                            <b>Afferent Couplings (Ca):</b> The number of other packages relying on the package's classes.
+                            Is an indicator of the package's responsibility.
+                        </li>
+                        <li>
+                            <b>Efferent Couplings (Ce):</b> The number of other packages that the classes in the package
+                            depends on. Is an indicator of the package's independence.
+                        </li>
+                        <li>
+                            <b>Instability (I 0 to 1):</b> I = Ce / (Ce+ Ca).  0 (Zero) no other packages depend on it (highly resilient to changes). 
+                            1 (One) this means the package relies heavily on other packages.
+                        </li>
+                        <li>
+                            <b>Cycles:</b> A cycle means that two or more packages depend on each other either directly or indirectly.
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table-footer">
+        <tr class="no-hover">
+            <td style="text-align: left;">
+                <strong>&copy; 2024 ZupportL5-API | ClusterBR</strong>
+                <br/>All rights reserved.
+                <br/>This document was generated by ZupportL5-API code-metrics-processor
+            </td>
+            <td style="text-align: center;">
+                <strong>Contact Us:</strong>
+                <br/>Email: support@zupportl5.dev
+                <br/>Development: arcbrth@gmail.com
+            </td>
+            <td style="text-align: right;">
+                <strong>Powered by:</strong>
+                <br/><a class="link-footer" href="https://dev.java" target="_blank">Java</a>
+                <br/><a class="link-footer" href="https://spring.io" target="_blank">Spring Boot</a>
+                <br/><a class="link-footer" href="https://maven.apache.org" target="_blank">Apache Maven</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

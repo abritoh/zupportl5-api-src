@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <!-- By ClusterBR (arcbrth@gmail.com) | 2024-1108 | Compiled and deployed implementing MS-GitHub Wfs | Running on google-app-engine -->
+    
+    <title>ZupportL5-api - Batch Upload</title>    
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/view-batch-upload.css">    
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>ZupportL5-api</h1>
+        <h2>Batch Upload Workflow</h2>
+        <p class="p-higligth">
+            Select the the files to upload and press the "Start Batch Uploading" button.
+        </p>
+        <p>
+            Once the "Start Batch Uploading" button is pressed and confirmed a Spring Batch Process (Workflow) 
+            will be raised executing the following steps (more can be added as needed):
+        </p>
+        <ol class="list-steps">
+            <li><i>Validation</i>: Xml files will be validated against custom DTD.</li>
+            <li><i>Upload files to Dropbox server</i>: Xml files will be uploaded to the DropBox server.</li>
+            <li><i>Saving files content to database</i>: Depending on the document-type xml attribute,                
+                the file content will be saved in their respective database table</li>            
+        </ol>
+        <p><label>Note: This front-end-page was created to validate the implemented Workflow.</label></p>
+        <p><label>
+            <i>Below are the type of document xml-files accepted, click on download to see the expected file-structure for each case:</i>
+        </label></p>
+        <ul class="ul-document-types">
+            <li><label>KnowledgeBase (<a href="/xml/KB1.xml" download>download</a>)> document-type="KB"</label></li>
+            <li><label>Playbook (<a href="/xml/PB1.xml" download>download</a>)> document-type="PB"</label></li>
+            <li><label>Runbook (<a href="/xml/RB3.xml" download>download</a>)> document-type="RB"</label></li>
+        </ul>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input id="fileInput" type="file" name="files" multiple accept=".xml">
+            <br />
+            <div id="fileNames" class="file-list"></div>
+            <br />
+            <button id="submit" type="submit" disabled>Start Batch Uploading</button>
+        </form>        
+        <div id="progress" class="progress">
+            <label>processing ...&nbsp;</label>
+            <div class="loading">⏳</div>
+        </div>
+        <div id="result" class="result div-word-wrap"></div>
+        <div>
+            <p>Once the process is executed documents will be available at 
+                <a href="/api/documents/viewer" target="_blank">document-viewer.</a></p>
+        </div>
+        <h2 class="cp-right">&copy;&nbsp;ClusterBR | 2024</h2>
+    </div>
+
+    <script type="text/javascript">
+
+        var API_BATCH_PROCESS_XMLFILES_URL = '/api/batch/process-xmlfiles'
+            ;
+        var ELEMENT_UPLOAD_FORM = document.getElementById('uploadForm')
+            , ELEMENT_FILE_INPUT = document.getElementById('fileInput')
+            , ELEMENT_SUBMIT_BTN = document.getElementById('submit')
+            , ELEMENT_FILES_DIV = document.getElementById('fileNames')
+            , ELEMENT_PROGRESS_DIV = document.getElementById('progress')
+            , ELEMENT_RESULT_DIV = document.getElementById('result')
+            ;
+
+        ELEMENT_FILE_INPUT.addEventListener('change', function () {
+            var files = ELEMENT_FILE_INPUT.files, filesHtmltLi = '';
+
+            for (var i = 0; i < files.length; i++) {
+                filesHtmltLi += '<li>' + files[i].name + '</li>';
+            }
+            ELEMENT_FILES_DIV.innerHTML = '<ol>' + filesHtmltLi + '</ol>';
+            ELEMENT_SUBMIT_BTN.disabled = false;
+        });
+
+        ELEMENT_UPLOAD_FORM.addEventListener('submit', function (event) {
+
+            event.preventDefault();
+
+            if (!ELEMENT_FILE_INPUT.files || ELEMENT_FILE_INPUT.files.length < 1) {
+                return;
+            }
+
+            var msg = "Are you sure you want to send the files for processing?";
+            if (!confirm(msg)) {
+                return;
+            }
+
+            var formData = new FormData()
+                , files = ELEMENT_FILE_INPUT.files;
+
+            for (var i = 0; i < files.length; i++) {
+                formData.append('files', files[i]);
+            }
+
+            var requestObject = new XMLHttpRequest();
+            requestObject.open('POST', API_BATCH_PROCESS_XMLFILES_URL, true);
+
+            ELEMENT_PROGRESS_DIV.style.display = 'block';
+            ELEMENT_UPLOAD_FORM.style.display = 'none';
+            ELEMENT_RESULT_DIV.innerHTML = '';
+
+            requestObject.addEventListener('load', function () {                
+                var msg = '';
+
+                console.log("requestObject", requestObject);
+
+                if (requestObject.status == 200) {
+                    ELEMENT_RESULT_DIV.classList.remove('red');
+                    ELEMENT_RESULT_DIV.innerText = requestObject.responseText;
+                } else {
+                    ELEMENT_RESULT_DIV.classList.add('red');
+                    ELEMENT_RESULT_DIV.innerText = requestObject.responseText;
+                }
+
+                ELEMENT_UPLOAD_FORM.reset();
+                ELEMENT_UPLOAD_FORM.style.display = 'block';
+                ELEMENT_PROGRESS_DIV.style.display = 'none';
+                ELEMENT_FILES_DIV.innerHTML = '';
+            });
+
+            requestObject.send(formData);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+@startuml
+'-- Global styles
+skinparam backgroundColor White
+skinparam componentStyle uml2
+skinparam classAttributeIconSize 16
+skinparam classFontName "Helvetica, Arial, sans-serif"
+skinparam classFontSize 14
+skinparam classFontColor #333333
+
+'-- Custom styles for packages
+skinparam packageBackgroundColor #D8E6F3
+skinparam packageBorderColor #4B9CD3
+skinparam packageBorderThickness 2
+skinparam packagePadding 10
+skinparam packageRoundCorner 15
+
+'-- Custom styles for classes
+skinparam classBackgroundColor #F9F9F9
+skinparam classBorderColor #8B8B8B
+skinparam classBorderThickness 1
+skinparam classRoundCorner 10
+skinparam classShadowing true
+skinparam classStereotypeFontColor #4A4A4A
+skinparam classStereotypeFontSize 12
+skinparam classStereotypeFontName "Arial"
+
+'-- Title style
+skinparam titleFontName "Arial"
+skinparam titleFontSize 30
+skinparam titleAlignment center
+skinparam titleFontStyle bold
+
+
+'-- Title for the diagram
+title ZupportL5-API Components
+
+'-- Define Web Client package
+package "Web Client" { 
+    class Client {
+        note right
+            Uses the REST-API
+        end note        
+    }
+}
+
+'-- Define Database Server package
+package "Database Server" { 
+    class MySqlDB {
+        - Tables
+        - Stored Procedures
+        - Views
+        - Triggers
+        - Transactions
+        note right
+            Relational Database
+        end note        
+    }
+}
+
+'-- Define DropBox Server package
+package "DropBox Server" { 
+    class Dropbox {
+        note right
+            Repository for XML files and resources
+        end note        
+    }
+}
+
+'-- Define Web Server package
+package "Web Server" { 
+    class Server {
+        note right
+            Manages Spring Container
+        end note
+    }
+
+    package "Spring Boot Container" {
+        class Controller {
+            note right
+                Handles incoming HTTP requests,
+                maps to service methods
+            end note
+        }
+
+        class Service {
+            note right
+                Contains business logic,
+                interacts with repository
+            end note
+        }
+
+        class Repository {
+            note right
+                Performs JPA operations,
+                communicates with DB
+            end note
+        }
+
+        class Entities {
+            note right
+                Represents domain models
+            end note
+        }
+
+        package "JPA Layer" {
+            class JPA {
+                note right
+                    Manages persistence, queries DB
+                end note
+            }
+        }      
+
+        package "Spring Batch" {
+            class BatchProcessing {
+                note right
+                    Implements batch processing workflows
+                end note
+            }
+        }           
+    }
+}
+
+'-- Interactions
+Client --> Server : Sends HTTP Request (GET, POST, etc.)
+Server --> Controller : Forwards Request to appropriate Endpoint
+Controller --> Service : Calls Service Method to handle business logic
+Controller --> BatchProcessing : Calls Batch Processor for business workflows
+BatchProcessing --> Dropbox : Stores files in Dropbox as part of workflow
+Service --> Repository : Requests Data from Repository
+Repository --> JPA : Executes JPA Queries to retrieve data
+JPA --> MySqlDB : Sends SQL Queries to the Database
+MySqlDB --> JPA : Returns query results to JPA
+JPA --> Repository : Returns Data (Entities) to Repository
+Repository --> Entities : Maps Data to Entities
+Entities --> Service : Provides Data (Entities) to Service
+Repository --> Service : Returns Data (Entities) to Service Layer
+Service --> Controller : Returns Processed Data (Entities) to Controller
+Controller --> Server : Sends Response (JSON, XML, etc.)
+Server --> Client : Sends HTTP Response with Data
+
+' Additional relationships
+Entities --> JPA : Maps to Database Tables
+JPA --> MySqlDB : Queries Database Tables (via SQL)
+MySqlDB --> JPA : Returns Data (Mapped to Entities)
+@enduml

@@ -1,0 +1,30 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.Incidentlogs
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class Incidentlogs {
+ - java.lang.Integer id
+ - java.lang.String action
+ - java.sql.Timestamp timestamp
+ - org.apache.clusterbr.zupportl5.entity.Incident incidentID
+ - org.apache.clusterbr.zupportl5.entity.Engineer engineerID
+ + java.lang.Integer () getId()
+ + void (java.lang.Integer) setId()
+ + java.lang.String () getAction()
+ + void (java.lang.String) setAction()
+ + java.sql.Timestamp () getTimestamp()
+ + void (java.sql.Timestamp) setTimestamp()
+ + org.apache.clusterbr.zupportl5.entity.Incident () getIncidentID()
+ + void (org.apache.clusterbr.zupportl5.entity.Incident) setIncidentID()
+ + org.apache.clusterbr.zupportl5.entity.Engineer () getEngineerID()
+ + void (org.apache.clusterbr.zupportl5.entity.Engineer) setEngineerID()
+}
+@enduml

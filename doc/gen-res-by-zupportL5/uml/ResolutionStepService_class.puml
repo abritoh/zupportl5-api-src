@@ -1,0 +1,24 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.ResolutionStepService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class ResolutionStepService {
+ - org.apache.clusterbr.zupportl5.repository.ResolutionStepRepository repository
+ - org.apache.clusterbr.zupportl5.service.MessageService msgService
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.ResolutionStep> () getAll()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.ResolutionStep> (java.lang.Integer) getById()
+ + org.apache.clusterbr.zupportl5.entity.ResolutionStep (org.apache.clusterbr.zupportl5.entity.ResolutionStep) create()
+ + org.apache.clusterbr.zupportl5.entity.ResolutionStep (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.ResolutionStep) update()
+ + boolean (java.lang.Integer) deleteById()
+ + org.apache.clusterbr.zupportl5.exception.RestApiException (java.lang.Integer) lambdaupdate1()
+ + org.apache.clusterbr.zupportl5.entity.ResolutionStep (org.apache.clusterbr.zupportl5.entity.ResolutionStep, org.apache.clusterbr.zupportl5.entity.ResolutionStep) lambdaupdate0()
+}
+@enduml

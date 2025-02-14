@@ -1,0 +1,34 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for StatusService
+
+actor User
+User -> StatusService: getAll()
+StatusService --> User : return
+User -> StatusService: getById()
+participant Integer
+StatusService -> Integer: invoke dependency
+StatusService --> User : return
+User -> StatusService: create()
+participant Status
+StatusService -> Status: invoke dependency
+StatusService --> User : return
+User -> StatusService: update()
+StatusService -> Integer: invoke dependency
+StatusService -> Status: invoke dependency
+StatusService --> User : return
+User -> StatusService: deleteById()
+StatusService -> Integer: invoke dependency
+StatusService --> User : return
+User -> StatusService: lambdaupdate1()
+StatusService -> Integer: invoke dependency
+StatusService --> User : return
+User -> StatusService: lambdaupdate0()
+StatusService -> Status: invoke dependency
+StatusService -> Status: invoke dependency
+StatusService --> User : return
+@enduml

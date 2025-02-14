@@ -1,0 +1,15 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for StaticContentController
+
+actor User
+usecase "root" as UC_root
+User --> UC_root
+usecase "about" as UC_about
+User --> UC_about
+@enduml

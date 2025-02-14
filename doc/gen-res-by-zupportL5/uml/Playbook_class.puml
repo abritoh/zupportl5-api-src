@@ -1,0 +1,30 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.Playbook
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class Playbook {
+ - java.lang.Integer id
+ - java.lang.String category
+ - java.lang.String xmlHeader
+ - java.lang.String xmlContent
+ - java.sql.Timestamp createdAt
+ + java.lang.Integer () getId()
+ + void (java.lang.Integer) setId()
+ + java.lang.String () getXmlHeader()
+ + void (java.lang.String) setXmlHeader()
+ + java.lang.String () getXmlContent()
+ + void (java.lang.String) setXmlContent()
+ + java.sql.Timestamp () getCreatedAt()
+ + void (java.sql.Timestamp) setCreatedAt()
+ + java.lang.String () getCategory()
+ + void (java.lang.String) setCategory()
+}
+@enduml

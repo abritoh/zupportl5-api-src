@@ -1,0 +1,25 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for DropboxAuthorizationController
+
+actor User
+User -> DropboxAuthorizationController: startAuthorization()
+DropboxAuthorizationController --> User : return
+User -> DropboxAuthorizationController: handleCallback()
+participant String
+DropboxAuthorizationController -> String: invoke dependency
+participant HttpServletRequest
+DropboxAuthorizationController -> HttpServletRequest: invoke dependency
+DropboxAuthorizationController --> User : return
+User -> DropboxAuthorizationController: constructCurrentUriFromRequest()
+DropboxAuthorizationController -> HttpServletRequest: invoke dependency
+DropboxAuthorizationController --> User : return
+User -> DropboxAuthorizationController: lambdahandleCallback0()
+DropboxAuthorizationController -> String: invoke dependency
+DropboxAuthorizationController -> String: invoke dependency
+DropboxAuthorizationController --> User : return
+@enduml

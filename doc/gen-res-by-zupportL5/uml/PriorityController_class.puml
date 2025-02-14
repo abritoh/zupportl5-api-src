@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.PriorityController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class PriorityController {
+ - org.apache.clusterbr.zupportl5.service.PriorityService service
+ + org.springframework.http.ResponseEntity<java.util.List<org.apache.clusterbr.zupportl5.entity.Priority>> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Priority> (java.lang.Integer) getById()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Priority> (org.apache.clusterbr.zupportl5.entity.Priority) create()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Priority> (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.Priority) update()
+ + org.springframework.http.ResponseEntity<java.lang.Void> (java.lang.Integer) delete()
+}
+@enduml

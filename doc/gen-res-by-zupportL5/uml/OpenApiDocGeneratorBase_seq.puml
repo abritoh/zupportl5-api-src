@@ -1,0 +1,30 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for OpenApiDocGeneratorBase
+
+actor User
+User -> OpenApiDocGeneratorBase: getClassesInPackage()
+participant String
+OpenApiDocGeneratorBase -> String: invoke dependency
+OpenApiDocGeneratorBase --> User : return
+User -> OpenApiDocGeneratorBase: isHttpMethodAnnotatedWithHttpVerb()
+participant Method
+OpenApiDocGeneratorBase -> Method: invoke dependency
+OpenApiDocGeneratorBase --> User : return
+User -> OpenApiDocGeneratorBase: getHttpVerbFromMethod()
+OpenApiDocGeneratorBase -> Method: invoke dependency
+OpenApiDocGeneratorBase --> User : return
+User -> OpenApiDocGeneratorBase: getPathFromMethod()
+OpenApiDocGeneratorBase -> Method: invoke dependency
+OpenApiDocGeneratorBase --> User : return
+User -> OpenApiDocGeneratorBase: loadTemplate()
+OpenApiDocGeneratorBase -> String: invoke dependency
+OpenApiDocGeneratorBase --> User : return
+User -> OpenApiDocGeneratorBase: removeTrailingSlash()
+OpenApiDocGeneratorBase -> String: invoke dependency
+OpenApiDocGeneratorBase --> User : return
+@enduml

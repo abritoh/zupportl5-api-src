@@ -1,0 +1,18 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.ApiRootController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class ApiRootController {
+ - org.springframework.core.env.Environment env
+ - org.apache.clusterbr.zupportl5.service.ApplicationInfoService service
+ + java.lang.String () aboutZupportL5Api()
+}
+@enduml

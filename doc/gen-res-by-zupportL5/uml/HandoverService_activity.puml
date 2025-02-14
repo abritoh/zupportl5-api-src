@@ -1,0 +1,32 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for HandoverService
+
+if (findAll) then (yes)
+:findAll;
+endif
+if (findById) then (yes)
+:findById;
+endif
+if (save) then (yes)
+:save;
+endif
+if (update) then (yes)
+:update;
+endif
+if (deleteById) then (yes)
+:deleteById;
+endif
+if (lambdaupdate0) then (yes)
+:lambdaupdate0;
+else (nothing)
+:No Operation;
+endif
+stop
+@enduml

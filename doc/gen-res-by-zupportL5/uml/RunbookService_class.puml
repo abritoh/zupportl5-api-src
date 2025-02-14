@@ -1,0 +1,19 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.RunbookService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class RunbookService {
+ + void (org.apache.clusterbr.zupportl5.entity.Runbook, org.apache.clusterbr.zupportl5.entity.Runbook) fillPropertiesOnUpdate()
+ + void (java.lang.Object, java.lang.Object) fillPropertiesOnUpdate()
+}
+RunbookService --|> orgapacheclusterbrzupportl5serviceGenericServiceImpl
+RunbookService ..|> orgapacheclusterbrzupportl5genericGenericEntityService
+@enduml

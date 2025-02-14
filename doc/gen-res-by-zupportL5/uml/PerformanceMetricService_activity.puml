@@ -1,0 +1,37 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for PerformanceMetricService
+
+if (getAll) then (yes)
+:getAll;
+endif
+if (getById) then (yes)
+:getById;
+endif
+if (create) then (yes)
+:create;
+endif
+if (update) then (yes)
+:update;
+endif
+if (deleteById) then (yes)
+:deleteById;
+endif
+if (lambdaupdate1) then (yes)
+:lambdaupdate1;
+else (nothing)
+:No Operation;
+endif
+if (lambdaupdate0) then (yes)
+:lambdaupdate0;
+else (nothing)
+:No Operation;
+endif
+stop
+@enduml

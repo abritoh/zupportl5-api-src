@@ -1,0 +1,25 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for DropboxTokenService
+
+actor User
+usecase "getAuthorizationUrl" as UC_getAuthorizationUrl
+User --> UC_getAuthorizationUrl
+usecase "getRefreshToken" as UC_getRefreshToken
+User --> UC_getRefreshToken
+usecase "saveSettings" as UC_saveSettings
+User --> UC_saveSettings
+usecase "getAccessTokenFromDBOrRequestNew" as UC_getAccessTokenFromDBOrRequestNew
+User --> UC_getAccessTokenFromDBOrRequestNew
+usecase "getRefreshTokenFromDatabase" as UC_getRefreshTokenFromDatabase
+User --> UC_getRefreshTokenFromDatabase
+usecase "getAccessTokenFromDatabase" as UC_getAccessTokenFromDatabase
+User --> UC_getAccessTokenFromDatabase
+usecase "getTokenFromDatabase" as UC_getTokenFromDatabase
+User --> UC_getTokenFromDatabase
+@enduml

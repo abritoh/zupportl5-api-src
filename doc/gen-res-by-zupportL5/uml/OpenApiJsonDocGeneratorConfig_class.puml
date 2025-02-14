@@ -1,0 +1,20 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.processor.OpenApiJsonDocGeneratorConfig
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class OpenApiJsonDocGeneratorConfig {
+ - java.util.Map<java.lang.String, java.lang.Object> swaggerInfo
+ - java.lang.String APPLICATION_BASE_PACKAGE
+ - java.lang.String GENERATED_JSON_REPORT_FILE
+ - org.apache.clusterbr.zupportl5.processor.ProcessorSettings this0
+ + java.util.Map<java.lang.String, java.lang.Object> () getSwaggerInfo()
+}
+@enduml

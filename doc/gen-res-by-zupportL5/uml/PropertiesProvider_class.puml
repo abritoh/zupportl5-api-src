@@ -1,0 +1,27 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.utils.PropertiesProvider
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class PropertiesProvider {
+ - org.slf4j.Logger logger
+ - java.lang.String DEV
+ - java.lang.String DEVGCP
+ - java.lang.String PROD
+ - java.lang.String APPLICATION_PROPERTIES
+ - org.apache.clusterbr.zupportl5.utils.PropertiesProvider instance
+ - java.util.Properties properties
+ + void () loadProperties()
+ + org.apache.clusterbr.zupportl5.utils.PropertiesProvider () getInstance()
+ + java.lang.String (java.lang.String) getProperty()
+ + java.lang.String (java.lang.String, java.lang.String) getPropertyOrDefault()
+ + java.lang.String () getActiveProfile()
+}
+@enduml

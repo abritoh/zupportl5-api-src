@@ -1,0 +1,34 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.dto.SettingsDto
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class SettingsDto {
+ - java.lang.String idKey
+ - java.lang.String value
+ - java.lang.String label
+ - java.lang.Long expiresAtLong
+ - java.sql.Timestamp expiresAtTime
+ - java.sql.Timestamp lastUpdate
+ + java.lang.String () getIdKey()
+ + void (java.lang.String) setIdKey()
+ + java.lang.String () getValue()
+ + void (java.lang.String) setValue()
+ + java.lang.String () getLabel()
+ + void (java.lang.String) setLabel()
+ + java.lang.Long () getExpiresAtLong()
+ + void (java.lang.Long) setExpiresAtLong()
+ + java.sql.Timestamp () getExpiresAtTime()
+ + void (java.sql.Timestamp) setExpiresAtTime()
+ + java.sql.Timestamp () getLastUpdate()
+ + void (java.sql.Timestamp) setLastUpdate()
+ + java.lang.String () toString()
+}
+@enduml

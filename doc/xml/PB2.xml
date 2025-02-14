@@ -1,0 +1,18 @@
+<document version="1.0">
+    <document-type>PB</document-type>
+    <category>IT Security|Incident Response|Malware|Malware Incident Response</category>
+    <xmlheader>
+        <title>Malware Incident Response Playbook</title>
+    </xmlheader>
+    <xmlcontent>
+        <steps>
+            <step>1. Isolate the infected system to prevent further spread.</step>
+            <step>2. Identify the type of malware and its entry point.</step>
+            <step>3. Remove the malware using specialized tools.</step>
+            <step>4. Restore affected systems from clean backups.</step>
+            <step>5. Implement security patches and updates.</step>
+            <step>6. Monitor network traffic for unusual activity.</step>
+            <step>7. Educate users on avoiding malware infections.</step>
+        </steps>
+    </xmlcontent>
+</document>

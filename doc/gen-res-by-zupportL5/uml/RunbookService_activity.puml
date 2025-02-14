@@ -1,0 +1,18 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for RunbookService
+
+if (fillPropertiesOnUpdate) then (yes)
+:fillPropertiesOnUpdate;
+endif
+if (fillPropertiesOnUpdate) then (yes)
+:fillPropertiesOnUpdate;
+endif
+stop
+@enduml

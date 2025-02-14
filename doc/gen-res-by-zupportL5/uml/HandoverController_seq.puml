@@ -1,0 +1,37 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for HandoverController
+
+actor User
+User -> HandoverController: createHandover()
+participant Handover
+HandoverController -> Handover: invoke dependency
+HandoverController --> User : return
+User -> HandoverController: getAll()
+HandoverController --> User : return
+User -> HandoverController: getById()
+participant Integer
+HandoverController -> Integer: invoke dependency
+HandoverController --> User : return
+User -> HandoverController: update()
+HandoverController -> Integer: invoke dependency
+HandoverController -> Handover: invoke dependency
+HandoverController --> User : return
+User -> HandoverController: delete()
+HandoverController -> Integer: invoke dependency
+HandoverController --> User : return
+User -> HandoverController: lambdaupdate3()
+HandoverController --> User : return
+User -> HandoverController: lambdaupdate2()
+HandoverController -> Handover: invoke dependency
+HandoverController --> User : return
+User -> HandoverController: lambdagetById1()
+HandoverController --> User : return
+User -> HandoverController: lambdagetById0()
+HandoverController -> Handover: invoke dependency
+HandoverController --> User : return
+@enduml

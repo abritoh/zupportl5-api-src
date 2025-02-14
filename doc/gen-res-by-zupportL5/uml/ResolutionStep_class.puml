@@ -1,0 +1,33 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.ResolutionStep
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class ResolutionStep {
+ - java.lang.Integer id
+ - java.lang.Integer stepNumber
+ - java.lang.String description
+ - java.sql.Timestamp createdAt
+ - org.apache.clusterbr.zupportl5.entity.Incident incidentID
+ - org.apache.clusterbr.zupportl5.entity.Engineer engineerID
+ + java.lang.Integer () getId()
+ + void (java.lang.Integer) setId()
+ + java.lang.Integer () getStepNumber()
+ + void (java.lang.Integer) setStepNumber()
+ + java.lang.String () getDescription()
+ + void (java.lang.String) setDescription()
+ + java.sql.Timestamp () getCreatedAt()
+ + void (java.sql.Timestamp) setCreatedAt()
+ + org.apache.clusterbr.zupportl5.entity.Incident () getIncidentID()
+ + void (org.apache.clusterbr.zupportl5.entity.Incident) setIncidentID()
+ + org.apache.clusterbr.zupportl5.entity.Engineer () getEngineerID()
+ + void (org.apache.clusterbr.zupportl5.entity.Engineer) setEngineerID()
+}
+@enduml

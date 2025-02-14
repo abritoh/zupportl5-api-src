@@ -1,0 +1,16 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for ViewIncidentDetailController
+
+actor User
+User -> ViewIncidentDetailController: getAll()
+ViewIncidentDetailController --> User : return
+User -> ViewIncidentDetailController: getById()
+participant Long
+ViewIncidentDetailController -> Long: invoke dependency
+ViewIncidentDetailController --> User : return
+@enduml

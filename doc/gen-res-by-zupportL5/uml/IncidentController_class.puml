@@ -1,0 +1,25 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.IncidentController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class IncidentController {
+ - org.apache.clusterbr.zupportl5.service.IncidentService service
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Incident> (org.apache.clusterbr.zupportl5.entity.Incident) create()
+ + org.springframework.http.ResponseEntity<java.util.List<org.apache.clusterbr.zupportl5.entity.Incident>> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Incident> (java.lang.Integer) getById()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Incident> (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.Incident) update()
+ + org.springframework.http.ResponseEntity<java.lang.Void> (java.lang.Integer) delete()
+ + org.springframework.http.ResponseEntity () lambdaupdate3()
+ + org.springframework.http.ResponseEntity (org.apache.clusterbr.zupportl5.entity.Incident) lambdaupdate2()
+ + org.springframework.http.ResponseEntity () lambdagetById1()
+ + org.springframework.http.ResponseEntity (org.apache.clusterbr.zupportl5.entity.Incident) lambdagetById0()
+}
+@enduml

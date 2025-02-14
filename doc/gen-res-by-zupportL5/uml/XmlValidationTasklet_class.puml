@@ -1,0 +1,20 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.component.XmlValidationTasklet
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class XmlValidationTasklet {
+ - org.slf4j.Logger logger
+ - org.apache.clusterbr.zupportl5.utils.ValidatorXmlXsd xmlValidator
+ + org.springframework.batch.repeat.RepeatStatus (org.springframework.batch.core.StepContribution, org.springframework.batch.core.scope.context.ChunkContext) execute()
+ + boolean (java.lang.String, java.lang.String) areStepParameteresNotNull()
+}
+XmlValidationTasklet ..|> orgspringframeworkbatchcoresteptaskletTasklet
+@enduml

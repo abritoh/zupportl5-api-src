@@ -1,0 +1,20 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for KnowledgebaseService
+
+actor User
+User -> KnowledgebaseService: fillPropertiesOnUpdate()
+participant Knowledgebase
+KnowledgebaseService -> Knowledgebase: invoke dependency
+KnowledgebaseService -> Knowledgebase: invoke dependency
+KnowledgebaseService --> User : return
+User -> KnowledgebaseService: fillPropertiesOnUpdate()
+participant Object
+KnowledgebaseService -> Object: invoke dependency
+KnowledgebaseService -> Object: invoke dependency
+KnowledgebaseService --> User : return
+@enduml

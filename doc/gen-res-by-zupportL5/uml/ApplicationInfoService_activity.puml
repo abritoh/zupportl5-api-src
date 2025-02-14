@@ -1,0 +1,33 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for ApplicationInfoService
+
+if (Init) then (yes)
+:Init;
+endif
+if (replacePlaceholders) then (yes)
+:replacePlaceholders;
+endif
+if (getFormattedVersion) then (yes)
+:getFormattedVersion;
+endif
+if (getJavaVersion) then (yes)
+:getJavaVersion;
+endif
+if (getSpringBootVersion) then (yes)
+:getSpringBootVersion;
+endif
+if (getApplicationTitle) then (yes)
+:getApplicationTitle;
+endif
+if (getApplicationVersion) then (yes)
+:getApplicationVersion;
+endif
+stop
+@enduml

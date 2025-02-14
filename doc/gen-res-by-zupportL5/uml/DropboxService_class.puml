@@ -1,0 +1,26 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.dropbox.DropboxService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class DropboxService {
+ - org.slf4j.Logger logger
+ - java.lang.String dropboxClientName
+ - org.apache.clusterbr.zupportl5.service.dropbox.DropboxTokenService dropboxTokenService
+ + com.dropbox.core.v2.DbxClientV2 () createDropboxClient()
+ + java.util.List<java.lang.String> (java.lang.String) getFileNames()
+ + byte[] (java.lang.String, java.lang.String) downloadFile()
+ + java.util.List<org.apache.clusterbr.zupportl5.dto.Tuple<java.lang.String, java.lang.Boolean>> (org.springframework.web.multipart.MultipartFile[]) uploadFile()
+ + org.apache.clusterbr.zupportl5.dto.Tuple<java.lang.Boolean, java.lang.String> (org.springframework.web.multipart.MultipartFile) uploadFile()
+ + org.apache.clusterbr.zupportl5.dto.Tuple<java.lang.Boolean, java.lang.String> (java.lang.String, java.lang.String) uploadFile()
+ + org.apache.clusterbr.zupportl5.dto.Tuple<java.lang.Boolean, java.lang.String> (java.io.InputStream, java.lang.String) uploadFile()
+ + java.lang.String (java.lang.Exception) getExceptionMessageOrDefault()
+}
+@enduml

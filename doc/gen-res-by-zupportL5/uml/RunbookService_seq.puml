@@ -1,0 +1,20 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for RunbookService
+
+actor User
+User -> RunbookService: fillPropertiesOnUpdate()
+participant Runbook
+RunbookService -> Runbook: invoke dependency
+RunbookService -> Runbook: invoke dependency
+RunbookService --> User : return
+User -> RunbookService: fillPropertiesOnUpdate()
+participant Object
+RunbookService -> Object: invoke dependency
+RunbookService -> Object: invoke dependency
+RunbookService --> User : return
+@enduml

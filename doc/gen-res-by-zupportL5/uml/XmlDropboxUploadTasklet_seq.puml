@@ -1,0 +1,21 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for XmlDropboxUploadTasklet
+
+actor User
+User -> XmlDropboxUploadTasklet: execute()
+participant StepContribution
+XmlDropboxUploadTasklet -> StepContribution: invoke dependency
+participant ChunkContext
+XmlDropboxUploadTasklet -> ChunkContext: invoke dependency
+XmlDropboxUploadTasklet --> User : return
+User -> XmlDropboxUploadTasklet: areStepParameteresNotNull()
+participant String
+XmlDropboxUploadTasklet -> String: invoke dependency
+XmlDropboxUploadTasklet -> String: invoke dependency
+XmlDropboxUploadTasklet --> User : return
+@enduml

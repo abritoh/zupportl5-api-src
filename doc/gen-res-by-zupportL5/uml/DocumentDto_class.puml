@@ -1,0 +1,33 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.dto.DocumentDto
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class DocumentDto {
+ - java.lang.String documentType
+ - java.lang.String category
+ - java.lang.String xmlHeader
+ - java.lang.String xmlContent
+ - java.sql.Timestamp createdAt
+ - java.lang.String idSource
+ + java.lang.String () getDocumentType()
+ + void (java.lang.String) setDocumentType()
+ + java.lang.String () getCategory()
+ + void (java.lang.String) setCategory()
+ + java.lang.String () getXmlHeader()
+ + void (java.lang.String) setXmlHeader()
+ + java.lang.String () getXmlContent()
+ + void (java.lang.String) setXmlContent()
+ + java.sql.Timestamp () getCreatedAt()
+ + void (java.sql.Timestamp) setCreatedAt()
+ + java.lang.String () getIdSource()
+ + void (java.lang.String) setIdSource()
+}
+@enduml

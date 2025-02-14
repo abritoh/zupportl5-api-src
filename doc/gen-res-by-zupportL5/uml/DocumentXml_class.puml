@@ -1,0 +1,36 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.dto.xml.DocumentXml
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class DocumentXml {
+ - long serialVersionUID
+ - org.slf4j.Logger logger
+ - java.lang.String version
+ - java.lang.String documentType
+ - java.lang.String category
+ - org.apache.clusterbr.zupportl5.dto.xml.XmlHeader xmlHeader
+ - org.apache.clusterbr.zupportl5.dto.xml.XmlContent xmlContent
+ + java.lang.String () getVersion()
+ + void (java.lang.String) setVersion()
+ + java.lang.String () getDocumentType()
+ + void (java.lang.String) setDocumentType()
+ + java.lang.String () getCategory()
+ + void (java.lang.String) setCategory()
+ + org.apache.clusterbr.zupportl5.dto.xml.XmlHeader () getXmlHeader()
+ + void (org.apache.clusterbr.zupportl5.dto.xml.XmlHeader) setXmlHeader()
+ + org.apache.clusterbr.zupportl5.dto.xml.XmlContent () getXmlContent()
+ + void (org.apache.clusterbr.zupportl5.dto.xml.XmlContent) setXmlContent()
+ + java.lang.String () toString()
+ + org.apache.clusterbr.zupportl5.dto.xml.DocumentXml (java.lang.String) convertFromString()
+ + org.apache.clusterbr.zupportl5.dto.xml.DocumentXml (java.io.InputStream) convertFromStream()
+}
+DocumentXml ..|> javaioSerializable
+@enduml

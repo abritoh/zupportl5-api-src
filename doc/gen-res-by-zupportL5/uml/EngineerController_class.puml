@@ -1,0 +1,31 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.EngineerController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class EngineerController {
+ - org.apache.clusterbr.zupportl5.service.EngineerService service
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Engineer> (org.apache.clusterbr.zupportl5.entity.Engineer) create()
+ + org.springframework.http.ResponseEntity<java.util.List<org.apache.clusterbr.zupportl5.entity.Engineer>> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Engineer> (java.lang.Long) getById()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Engineer> (java.lang.String) getByEmail()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Engineer> (java.lang.Long, org.apache.clusterbr.zupportl5.entity.Engineer) update()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Engineer> (java.lang.Long, java.util.Map<java.lang.String, java.lang.Object>) partialUpdate()
+ + org.springframework.http.ResponseEntity<java.lang.Void> (java.lang.Long) delete()
+ + org.springframework.http.ResponseEntity () lambdapartialUpdate7()
+ + org.springframework.http.ResponseEntity (org.apache.clusterbr.zupportl5.entity.Engineer) lambdapartialUpdate6()
+ + org.springframework.http.ResponseEntity () lambdaupdate5()
+ + org.springframework.http.ResponseEntity (org.apache.clusterbr.zupportl5.entity.Engineer) lambdaupdate4()
+ + org.springframework.http.ResponseEntity () lambdagetByEmail3()
+ + org.springframework.http.ResponseEntity (org.apache.clusterbr.zupportl5.entity.Engineer) lambdagetByEmail2()
+ + org.springframework.http.ResponseEntity () lambdagetById1()
+ + org.springframework.http.ResponseEntity (org.apache.clusterbr.zupportl5.entity.Engineer) lambdagetById0()
+}
+@enduml

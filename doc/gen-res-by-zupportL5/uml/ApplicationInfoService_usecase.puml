@@ -1,0 +1,21 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for ApplicationInfoService
+
+actor User
+usecase "replacePlaceholders" as UC_replacePlaceholders
+User --> UC_replacePlaceholders
+usecase "getJavaVersion" as UC_getJavaVersion
+User --> UC_getJavaVersion
+usecase "getSpringBootVersion" as UC_getSpringBootVersion
+User --> UC_getSpringBootVersion
+usecase "getApplicationTitle" as UC_getApplicationTitle
+User --> UC_getApplicationTitle
+usecase "getApplicationVersion" as UC_getApplicationVersion
+User --> UC_getApplicationVersion
+@enduml

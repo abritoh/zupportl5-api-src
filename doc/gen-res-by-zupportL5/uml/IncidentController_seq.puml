@@ -1,0 +1,37 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for IncidentController
+
+actor User
+User -> IncidentController: create()
+participant Incident
+IncidentController -> Incident: invoke dependency
+IncidentController --> User : return
+User -> IncidentController: getAll()
+IncidentController --> User : return
+User -> IncidentController: getById()
+participant Integer
+IncidentController -> Integer: invoke dependency
+IncidentController --> User : return
+User -> IncidentController: update()
+IncidentController -> Integer: invoke dependency
+IncidentController -> Incident: invoke dependency
+IncidentController --> User : return
+User -> IncidentController: delete()
+IncidentController -> Integer: invoke dependency
+IncidentController --> User : return
+User -> IncidentController: lambdaupdate3()
+IncidentController --> User : return
+User -> IncidentController: lambdaupdate2()
+IncidentController -> Incident: invoke dependency
+IncidentController --> User : return
+User -> IncidentController: lambdagetById1()
+IncidentController --> User : return
+User -> IncidentController: lambdagetById0()
+IncidentController -> Incident: invoke dependency
+IncidentController --> User : return
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for StaticDiagramGenerator
+
+actor User
+User -> StaticDiagramGenerator: generate()
+StaticDiagramGenerator --> User : return
+User -> StaticDiagramGenerator: lambdagenerate0()
+participant File
+StaticDiagramGenerator -> File: invoke dependency
+participant String
+StaticDiagramGenerator -> String: invoke dependency
+StaticDiagramGenerator --> User : return
+@enduml

@@ -1,0 +1,34 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.PerformanceMetric
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class PerformanceMetric {
+ - java.lang.Integer id
+ - java.lang.Integer resolutionTime
+ - java.lang.Integer responseTime
+ - @jakarta.validation.constraints.Min(1) @jakarta.validation.constraints.Max(5) java.lang.Integer satisfactionScore
+ - java.sql.Timestamp createdAt
+ - org.apache.clusterbr.zupportl5.entity.Incident incidentID
+ + void () validateSatisfactionScore()
+ + java.lang.Integer () getId()
+ + void (java.lang.Integer) setId()
+ + java.lang.Integer () getResolutionTime()
+ + void (java.lang.Integer) setResolutionTime()
+ + java.lang.Integer () getResponseTime()
+ + void (java.lang.Integer) setResponseTime()
+ + java.lang.Integer () getSatisfactionScore()
+ + void (java.lang.Integer) setSatisfactionScore()
+ + java.sql.Timestamp () getCreatedAt()
+ + void (java.sql.Timestamp) setCreatedAt()
+ + org.apache.clusterbr.zupportl5.entity.Incident () getIncidentID()
+ + void (org.apache.clusterbr.zupportl5.entity.Incident) setIncidentID()
+}
+@enduml

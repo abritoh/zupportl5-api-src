@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- By ClusterBR (arcbrth@gmail.com) | 2024-1209 | Compiled and deployed implementing MS-GitHub Wfs | Running on google-app-engine -->
+    
+    <title>ZupportL5-api Dependency Tree</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+    <link rel="icon" type="image/png" href="/img/favicon.png">    
+    <link rel="stylesheet" href="/css/dependency-tree.css">    
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="title">ZupportL5-api Dependency Tree</div>
+        <section class="description">
+            <p>
+                This page visualizes the <b>ZupportL5-api</b> project's dependencies in a tree structure. Each node represents a library or component that 
+                is part of the project. This tree helps to understand the modular structure of the project and how different components depend on each other. 
+                The tree is automatically generated with each release to ensure that the latest version of the dependencies is reflected.
+            </p>
+        </section>        
+        <ul id="tree"></ul>        
+    </div>
+
+    <footer>
+        <p>© 2024 ZupportL5 API | ClusterBR</p>
+    </footer>    
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+
+            loadFile('./ZupportL5-api-dependency-tree.txt', function (responseText) {
+                const treeData = parseTreeData(responseText);
+                renderTree(treeData, document.getElementById('tree'));
+            });
+
+            function loadFile(url, callback) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', url, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        callback(xhr.responseText);
+                    }
+                };
+                xhr.send();
+            }
+
+            function parseTreeData(text) {
+                const treeData = {};
+                text.split('\n').forEach(line => {
+                    const match = line.match(/"(.*?)"\s*->\s*"(.*?)"/);
+                    if (match) {
+                        const [_, parent, child] = match;
+                        treeData[parent] = treeData[parent] || [];
+                        treeData[parent].push(child);
+                    }
+                });
+                return treeData;
+            }
+
+            function renderTree(data, container) {
+                let count = 1;                
+                const sortedParents = Object.entries(data).sort(([parentA], [parentB]) => parentA.localeCompare(parentB));
+                
+                sortedParents.forEach(([parent, children]) => {
+                    const parentItem = createListItem(`${count}. ${parent}`);                    
+
+                    const sortedChildren = children.sort();
+                    const childList = document.createElement('ul');
+                    sortedChildren.forEach((child, index) => {
+                        childList.appendChild(createListItem(`${count}.${index + 1} ${child}`));
+                    });
+
+                    count++;
+                    parentItem.appendChild(childList);
+                    container.appendChild(parentItem);
+                });
+            }
+
+            function createListItem(text) {
+                const li = document.createElement('li');
+                li.textContent = text;
+                li.className = 'node';
+                return li;
+            }
+        });
+    </script>
+</body>
+
+</html>

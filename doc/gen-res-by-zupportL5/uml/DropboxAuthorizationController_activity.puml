@@ -1,0 +1,26 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for DropboxAuthorizationController
+
+if (startAuthorization) then (yes)
+:startAuthorization;
+endif
+if (handleCallback) then (yes)
+:handleCallback;
+endif
+if (constructCurrentUriFromRequest) then (yes)
+:constructCurrentUriFromRequest;
+endif
+if (lambdahandleCallback0) then (yes)
+:lambdahandleCallback0;
+else (nothing)
+:No Operation;
+endif
+stop
+@enduml

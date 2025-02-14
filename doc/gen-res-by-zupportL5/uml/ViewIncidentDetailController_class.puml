@@ -1,0 +1,18 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.ViewIncidentDetailController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class ViewIncidentDetailController {
+ - org.apache.clusterbr.zupportl5.service.ViewIncidentDetailService service
+ + org.springframework.http.ResponseEntity<java.util.List<org.apache.clusterbr.zupportl5.entity.ViewIncidentDetail>> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.ViewIncidentDetail> (java.lang.Long) getById()
+}
+@enduml

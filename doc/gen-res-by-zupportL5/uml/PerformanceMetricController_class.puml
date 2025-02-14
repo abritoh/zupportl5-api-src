@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.PerformanceMetricController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class PerformanceMetricController {
+ - org.apache.clusterbr.zupportl5.service.PerformanceMetricService service
+ + org.springframework.http.ResponseEntity<java.util.List<org.apache.clusterbr.zupportl5.entity.PerformanceMetric>> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.PerformanceMetric> (java.lang.Integer) getById()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.PerformanceMetric> (org.apache.clusterbr.zupportl5.entity.PerformanceMetric) create()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.PerformanceMetric> (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.PerformanceMetric) update()
+ + org.springframework.http.ResponseEntity<java.lang.Void> (java.lang.Integer) delete()
+}
+@enduml

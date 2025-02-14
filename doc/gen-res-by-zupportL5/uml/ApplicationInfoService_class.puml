@@ -1,0 +1,27 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.ApplicationInfoService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class ApplicationInfoService {
+ - org.slf4j.Logger logger
+ - java.lang.String javaVersion
+ - java.lang.String springBootVersion
+ - java.lang.String applicationTitle
+ - java.lang.String applicationVersion
+ + void () Init()
+ + java.lang.String (java.lang.String) replacePlaceholders()
+ + java.lang.String (java.lang.String) getFormattedVersion()
+ + java.lang.String () getJavaVersion()
+ + java.lang.String () getSpringBootVersion()
+ + java.lang.String () getApplicationTitle()
+ + java.lang.String () getApplicationVersion()
+}
+@enduml

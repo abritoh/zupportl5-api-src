@@ -1,0 +1,48 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for EngineerService
+
+if (findAll) then (yes)
+:findAll;
+endif
+if (getById) then (yes)
+:getById;
+endif
+if (getByEmail) then (yes)
+:getByEmail;
+endif
+if (save) then (yes)
+:save;
+endif
+if (update) then (yes)
+:update;
+endif
+if (partialUpdate) then (yes)
+:partialUpdate;
+endif
+if (deleteById) then (yes)
+:deleteById;
+endif
+if (lambdapartialUpdate2) then (yes)
+:lambdapartialUpdate2;
+else (nothing)
+:No Operation;
+endif
+if (lambdapartialUpdate1) then (yes)
+:lambdapartialUpdate1;
+else (nothing)
+:No Operation;
+endif
+if (lambdaupdate0) then (yes)
+:lambdaupdate0;
+else (nothing)
+:No Operation;
+endif
+stop
+@enduml

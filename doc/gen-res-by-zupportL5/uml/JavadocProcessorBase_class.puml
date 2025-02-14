@@ -1,0 +1,31 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.processor.JavadocProcessorBase
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class JavadocProcessorBase {
+ - org.slf4j.Logger logger
+ + boolean (java.io.File) shouldSkipProcessing()
+ + org.apache.clusterbr.zupportl5.processor.JavadocCommentBuilder (java.lang.Class<?>) generateRestApiComments()
+ + boolean (java.io.File) containsSkipAnnotation()
+ + boolean (java.io.File) containsExecuteAnnotation()
+ + java.lang.String (java.io.File) getClassName()
+ + java.lang.String (java.io.File) getClassFullName()
+ + java.lang.String (java.lang.String) extractFullyQualifiedClassName()
+ + void (java.io.File, java.lang.String) processRestore()
+ + void (java.io.File, java.lang.String) writeUpdatedContent()
+ + java.lang.String (java.lang.String) deleteEntireClassLevelComment()
+ + java.lang.String (java.lang.String) deleteJavadocProcessorComments()
+ + java.lang.String (java.lang.String, java.lang.String) replaceOrInsertJavadocProcessorComments()
+ + int (java.lang.String) findClassLevelInsertionPoint()
+ + int (java.lang.String) findClassLevelAnnotationStart()
+ + java.lang.String (java.lang.String, java.lang.String, int) insertAt()
+}
+@enduml

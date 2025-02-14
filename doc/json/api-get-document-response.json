@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "category": "IT Operations|Troubleshooting|Networking|Network Troubleshooting",
+        "xmlHeader": "<title>Network Troubleshooting Knowledge Base</title>",
+        "xmlContent": "<steps><step>1. Verify physical connections to ensure cables are properly connected.</step><step>2. Check the status of network devices (routers, switches) for errors.</step><step>3. Use the ping command to test connectivity between devices.</step><step>4. Analyze routing tables to ensure correct network paths.</step><step>5. Run a traceroute to detect where the connection fails.</step><step>6. Examine firewall settings to ensure traffic is not being blocked.</step><step>7. Check for DNS resolution issues by using nslookup or dig commands.</step><step>8. Test network speed using tools like iperf to identify bottlenecks.</step></steps>",
+        "createdAt": "2024-12-03T06:18:00.000+00:00"
+    },
+    {
+        "id": 2,
+        "category": "IT Operations|Troubleshooting|Database|Database Troubleshooting",
+        "xmlHeader": "<title>Database Connection Issue Knowledge Base</title>",
+        "xmlContent": "<steps><step>1. Check database server availability by pinging the host.</step><step>2. Review database logs for errors or timeouts.</step><step>3. Verify connection credentials such as username and password.</step><step>4. Ensure that the database is listening on the correct port.</step><step>5. Validate firewall and security group settings for the database.</step><step>6. Check for maximum connection limits or resource exhaustion.</step><step>7. Confirm that database user permissions are correctly configured.</step><step>8. Restart the database service if necessary and retest the connection.</step></steps>",
+        "createdAt": "2024-12-03T06:18:00.000+00:00"
+    },
+    {
+        "id": 3,
+        "category": "IT Operations|Performance|Application|Application Performance",
+        "xmlHeader": "<title>Application Performance Tuning Knowledge Base</title>",
+        "xmlContent": "<steps><step>1. Identify slow-performing transactions using profiling tools.</step><step>2. Review application logs for performance bottlenecks.</step><step>3. Optimize queries by indexing frequently accessed columns.</step><step>4. Improve memory management by tuning the JVM heap size.</step><step>5. Use caching mechanisms to reduce database load.</step><step>6. Profile code execution and refactor inefficient methods.</step><step>7. Monitor the system after making changes to confirm performance improvements.</step><step>8. Document all optimizations and their impact on performance.</step></steps>",
+        "createdAt": "2024-12-03T06:18:00.000+00:00"
+    },
+    {
+        "id": 4,
+        "category": "IT Security|Security|Risk Management|Security",
+        "xmlHeader": "<title>Security Breach Response Knowledge Base</title>",
+        "xmlContent": "<steps><step>1. Verify the authenticity of the security breach.</step><step>2. Contain the breach by isolating affected systems.</step><step>3. Notify key stakeholders and security teams about the breach.</step><step>4. Analyze the logs to understand the method of attack.</step><step>5. Apply patches or mitigation measures to vulnerable systems.</step><step>6. Recover compromised data and systems from secure backups.</step><step>7. Conduct a post-mortem analysis to understand the cause of the breach.</step><step>8. Update security policies and procedures to prevent future breaches.</step></steps>",
+        "createdAt": "2024-12-03T06:18:00.000+00:00"
+    },
+    {
+        "id": 5,
+        "category": "IT Continuity|Recovery|Business Continuity|Disaster Recovery",
+        "xmlHeader": "<title>Disaster Recovery Knowledge Base</title>",
+        "xmlContent": "<steps><step>1. Verify that backup systems are available and up-to-date.</step><step>2. Review the disaster recovery plan to ensure it is current.</step><step>3. Identify critical systems and services to recover first.</step><step>4. Initiate failover to a disaster recovery site if necessary.</step><step>5. Perform recovery procedures for servers, databases, and applications.</step><step>6. Test the recovered systems to ensure functionality.</step><step>7. Notify users and stakeholders when systems are back online.</step><step>8. Document the recovery process and update the disaster recovery plan.</step></steps>",
+        "createdAt": "2024-12-03T06:18:00.000+00:00"
+    },
+    {
+        "id": 6,
+        "category": "IT Operations|Knowledge Management|General|Knowledge Base Overview",
+        "xmlHeader": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><header><title>Knowledge Base Overview</title></header>",
+        "xmlContent": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><content><steps><step>1. Document important processes and procedures.</step><step>2. Regularly update the knowledge base with new information.</step><step>3. Ensure accessibility of the knowledge base to all relevant personnel.</step><step>4. Use indexing and categorization to improve searchability.</step><step>5. Review and validate the information periodically.</step></steps></content>",
+        "createdAt": "2024-12-03T07:24:13.000+00:00"
+    },
+    {
+        "id": 7,
+        "category": "IT Security|Incident Handling|Phishing|Phishing Incident Handling",
+        "xmlHeader": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><header><title>Phishing Incident Handling</title></header>",
+        "xmlContent": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><content><steps><step>1. Identify and isolate the phishing incident.</step><step>2. Notify affected users and stakeholders.</step><step>3. Analyze the phishing email and its impact.</step><step>4. Remove malicious content and block phishing sources.</step><step>5. Educate users on recognizing phishing attempts.</step></steps></content>",
+        "createdAt": "2024-12-03T07:24:26.000+00:00"
+    },
+    {
+        "id": 8,
+        "category": "Software Development|DevOps|Continuous Integration|CI Knowledge Base",
+        "xmlHeader": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><header><title>Continuous Integration Knowledge Base</title></header>",
+        "xmlContent": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><content><steps><step>1. Set up CI tools and infrastructure.</step><step>2. Integrate automated testing into the CI pipeline.</step><step>3. Monitor build statuses and results.</step><step>4. Maintain code quality with regular code reviews.</step><step>5. Update CI configurations as needed.</step></steps></content>",
+        "createdAt": "2024-12-03T07:24:40.000+00:00"
+    },
+    {
+        "id": 9,
+        "category": "IT Operations|Knowledge Management|General|Knowledge Base Overview",
+        "xmlHeader": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><header><title>Knowledge Base Overview</title></header>",
+        "xmlContent": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><content><steps><step>1. Document important processes and procedures.</step><step>2. Regularly update the knowledge base with new information.</step><step>3. Ensure accessibility of the knowledge base to all relevant personnel.</step><step>4. Use indexing and categorization to improve searchability.</step><step>5. Review and validate the information periodically.</step></steps></content>",
+        "createdAt": "2024-12-03T07:47:19.000+00:00"
+    },
+    {
+        "id": 10,
+        "category": "IT Security|Incident Handling|Phishing|Phishing Incident Handling",
+        "xmlHeader": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><header><title>Phishing Incident Handling</title></header>",
+        "xmlContent": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><content><steps><step>1. Identify and isolate the phishing incident.</step><step>2. Notify affected users and stakeholders.</step><step>3. Analyze the phishing email and its impact.</step><step>4. Remove malicious content and block phishing sources.</step><step>5. Educate users on recognizing phishing attempts.</step></steps></content>",
+        "createdAt": "2024-12-03T07:47:33.000+00:00"
+    },
+    {
+        "id": 11,
+        "category": "Software Development|DevOps|Continuous Integration|CI Knowledge Base",
+        "xmlHeader": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><header><title>Continuous Integration Knowledge Base</title></header>",
+        "xmlContent": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><content><steps><step>1. Set up CI tools and infrastructure.</step><step>2. Integrate automated testing into the CI pipeline.</step><step>3. Monitor build statuses and results.</step><step>4. Maintain code quality with regular code reviews.</step><step>5. Update CI configurations as needed.</step></steps></content>",
+        "createdAt": "2024-12-03T07:47:46.000+00:00"
+    }
+]

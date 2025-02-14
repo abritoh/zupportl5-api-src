@@ -1,0 +1,25 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for EngineerService
+
+actor User
+usecase "findAll" as UC_findAll
+User --> UC_findAll
+usecase "getById" as UC_getById
+User --> UC_getById
+usecase "getByEmail" as UC_getByEmail
+User --> UC_getByEmail
+usecase "save" as UC_save
+User --> UC_save
+usecase "update" as UC_update
+User --> UC_update
+usecase "partialUpdate" as UC_partialUpdate
+User --> UC_partialUpdate
+usecase "deleteById" as UC_deleteById
+User --> UC_deleteById
+@enduml

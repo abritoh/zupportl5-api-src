@@ -1,0 +1,29 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.component.DatabaseSessionStore
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class DatabaseSessionStore {
+ - org.slf4j.Logger logger
+ - java.lang.String NO_VALUE
+ - java.lang.String CURRENT_THREAD_NOT_KEY_SET
+ - int expirationMinutes
+ - org.apache.clusterbr.zupportl5.service.dropbox.DropboxAuthStateService authStateService
+ - java.lang.ThreadLocal<java.lang.String> THREAD_LOCAL_KEY
+ + java.lang.String () get()
+ + void (java.lang.String) set()
+ + void () clear()
+ + void (java.lang.String) setThreadLocalRequestId()
+ + java.lang.String (java.lang.String) get()
+ + void (java.lang.String, java.lang.String, java.lang.String) set()
+ + void (java.lang.String) clear()
+}
+DatabaseSessionStore ..|> comdropboxcoreDbxSessionStore
+@enduml

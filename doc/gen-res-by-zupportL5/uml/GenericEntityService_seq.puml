@@ -1,0 +1,20 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for GenericEntityService
+
+actor User
+User -> GenericEntityService: getAll()
+GenericEntityService --> User : return
+User -> GenericEntityService: getById()
+GenericEntityService --> User : return
+User -> GenericEntityService: create()
+GenericEntityService --> User : return
+User -> GenericEntityService: update()
+GenericEntityService --> User : return
+User -> GenericEntityService: deleteById()
+GenericEntityService --> User : return
+@enduml

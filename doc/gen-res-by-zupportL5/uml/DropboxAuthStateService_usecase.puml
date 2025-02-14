@@ -1,0 +1,17 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for DropboxAuthStateService
+
+actor User
+usecase "saveState" as UC_saveState
+User --> UC_saveState
+usecase "getState" as UC_getState
+User --> UC_getState
+usecase "deleteState" as UC_deleteState
+User --> UC_deleteState
+@enduml

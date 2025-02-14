@@ -1,0 +1,27 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for ApplicationInfoService
+
+actor User
+User -> ApplicationInfoService: Init()
+ApplicationInfoService --> User : return
+User -> ApplicationInfoService: replacePlaceholders()
+participant String
+ApplicationInfoService -> String: invoke dependency
+ApplicationInfoService --> User : return
+User -> ApplicationInfoService: getFormattedVersion()
+ApplicationInfoService -> String: invoke dependency
+ApplicationInfoService --> User : return
+User -> ApplicationInfoService: getJavaVersion()
+ApplicationInfoService --> User : return
+User -> ApplicationInfoService: getSpringBootVersion()
+ApplicationInfoService --> User : return
+User -> ApplicationInfoService: getApplicationTitle()
+ApplicationInfoService --> User : return
+User -> ApplicationInfoService: getApplicationVersion()
+ApplicationInfoService --> User : return
+@enduml

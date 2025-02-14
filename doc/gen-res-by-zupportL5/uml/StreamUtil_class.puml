@@ -1,0 +1,20 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.utils.StreamUtil
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class StreamUtil {
+ - org.slf4j.Logger logger
+ + java.lang.String (java.io.InputStream) readInputStreamTextLines()
+ + java.lang.String (java.lang.String) encodeStringToStringBase64()
+ + java.lang.String (java.lang.Object) encodeObjectToStringBase64()
+ + java.lang.String (java.lang.String) decodeStringBase64()
+}
+@enduml

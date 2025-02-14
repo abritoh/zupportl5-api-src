@@ -1,0 +1,27 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for TeamController
+
+actor User
+User -> TeamController: getAll()
+TeamController --> User : return
+User -> TeamController: getById()
+participant Integer
+TeamController -> Integer: invoke dependency
+TeamController --> User : return
+User -> TeamController: create()
+participant Team
+TeamController -> Team: invoke dependency
+TeamController --> User : return
+User -> TeamController: update()
+TeamController -> Integer: invoke dependency
+TeamController -> Team: invoke dependency
+TeamController --> User : return
+User -> TeamController: delete()
+TeamController -> Integer: invoke dependency
+TeamController --> User : return
+@enduml

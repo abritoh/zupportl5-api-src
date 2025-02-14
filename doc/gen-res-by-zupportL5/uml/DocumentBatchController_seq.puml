@@ -1,0 +1,22 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for DocumentBatchController
+
+actor User
+User -> DocumentBatchController: getViewForProcessXml()
+DocumentBatchController --> User : return
+User -> DocumentBatchController: processXmlFiles()
+participant MultipartFile
+DocumentBatchController -> MultipartFile: invoke dependency
+DocumentBatchController --> User : return
+User -> DocumentBatchController: getMethodResultOrNull()
+participant ExecutionContext
+DocumentBatchController -> ExecutionContext: invoke dependency
+participant String
+DocumentBatchController -> String: invoke dependency
+DocumentBatchController --> User : return
+@enduml

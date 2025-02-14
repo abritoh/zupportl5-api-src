@@ -1,0 +1,36 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for DocumentService
+
+if (getDocument) then (yes)
+:getDocument;
+endif
+if (getAllDocuments) then (yes)
+:getAllDocuments;
+endif
+if (searchDocuments) then (yes)
+:searchDocuments;
+endif
+if (lambdasearchDocuments2) then (yes)
+:lambdasearchDocuments2;
+else (nothing)
+:No Operation;
+endif
+if (lambdagetAllDocuments1) then (yes)
+:lambdagetAllDocuments1;
+else (nothing)
+:No Operation;
+endif
+if (lambdagetDocument0) then (yes)
+:lambdagetDocument0;
+else (nothing)
+:No Operation;
+endif
+stop
+@enduml

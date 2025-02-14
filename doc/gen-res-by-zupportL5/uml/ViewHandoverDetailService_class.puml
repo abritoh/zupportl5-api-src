@@ -1,0 +1,18 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.ViewHandoverDetailService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class ViewHandoverDetailService {
+ - org.apache.clusterbr.zupportl5.repository.ViewHandoverDetailRepository repository
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.ViewHandoverDetail> () findAll()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.ViewHandoverDetail> (java.lang.Long) findById()
+}
+@enduml

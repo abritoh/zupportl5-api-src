@@ -1,0 +1,24 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.IncidentService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class IncidentService {
+ - org.apache.clusterbr.zupportl5.repository.IncidentRepository repository
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Incident> () findAll()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Incident> (java.lang.Integer) getById()
+ + org.apache.clusterbr.zupportl5.entity.Incident (org.apache.clusterbr.zupportl5.entity.Incident) save()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Incident> (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.Incident) update()
+ + boolean (java.lang.Integer) deleteById()
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Incident> (java.lang.String, java.lang.String, java.lang.String) getByCriteria()
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Incident> (java.lang.String, java.lang.String, java.lang.String) getByCriteriaWithCriteriaAPI()
+ + org.apache.clusterbr.zupportl5.entity.Incident (org.apache.clusterbr.zupportl5.entity.Incident, org.apache.clusterbr.zupportl5.entity.Incident) lambdaupdate0()
+}
+@enduml

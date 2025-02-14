@@ -1,0 +1,56 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for EngineerController
+
+actor User
+User -> EngineerController: create()
+participant Engineer
+EngineerController -> Engineer: invoke dependency
+EngineerController --> User : return
+User -> EngineerController: getAll()
+EngineerController --> User : return
+User -> EngineerController: getById()
+participant Long
+EngineerController -> Long: invoke dependency
+EngineerController --> User : return
+User -> EngineerController: getByEmail()
+participant String
+EngineerController -> String: invoke dependency
+EngineerController --> User : return
+User -> EngineerController: update()
+EngineerController -> Long: invoke dependency
+EngineerController -> Engineer: invoke dependency
+EngineerController --> User : return
+User -> EngineerController: partialUpdate()
+EngineerController -> Long: invoke dependency
+participant Object
+EngineerController -> Object: invoke dependency
+EngineerController --> User : return
+User -> EngineerController: delete()
+EngineerController -> Long: invoke dependency
+EngineerController --> User : return
+User -> EngineerController: lambdapartialUpdate7()
+EngineerController --> User : return
+User -> EngineerController: lambdapartialUpdate6()
+EngineerController -> Engineer: invoke dependency
+EngineerController --> User : return
+User -> EngineerController: lambdaupdate5()
+EngineerController --> User : return
+User -> EngineerController: lambdaupdate4()
+EngineerController -> Engineer: invoke dependency
+EngineerController --> User : return
+User -> EngineerController: lambdagetByEmail3()
+EngineerController --> User : return
+User -> EngineerController: lambdagetByEmail2()
+EngineerController -> Engineer: invoke dependency
+EngineerController --> User : return
+User -> EngineerController: lambdagetById1()
+EngineerController --> User : return
+User -> EngineerController: lambdagetById0()
+EngineerController -> Engineer: invoke dependency
+EngineerController --> User : return
+@enduml

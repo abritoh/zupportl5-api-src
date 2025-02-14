@@ -1,0 +1,15 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for DocumentBatchController
+
+actor User
+usecase "getViewForProcessXml" as UC_getViewForProcessXml
+User --> UC_getViewForProcessXml
+usecase "processXmlFiles" as UC_processXmlFiles
+User --> UC_processXmlFiles
+@enduml

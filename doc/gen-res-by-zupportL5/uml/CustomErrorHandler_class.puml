@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.utils.CustomErrorHandler
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class CustomErrorHandler {
+ - java.util.List<java.lang.String> errorList
+ + void (org.xml.sax.SAXParseException) warning()
+ + void (org.xml.sax.SAXParseException) error()
+ + void (org.xml.sax.SAXParseException) fatalError()
+ + java.lang.String (java.lang.String, org.xml.sax.SAXParseException) formatMessage()
+}
+CustomErrorHandler ..|> orgxmlsaxErrorHandler
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for KnowledgebaseController
+
+actor User
+User -> KnowledgebaseController: getAll()
+KnowledgebaseController --> User : return
+User -> KnowledgebaseController: getById()
+participant Long
+KnowledgebaseController -> Long: invoke dependency
+KnowledgebaseController --> User : return
+User -> KnowledgebaseController: create()
+participant Knowledgebase
+KnowledgebaseController -> Knowledgebase: invoke dependency
+KnowledgebaseController --> User : return
+User -> KnowledgebaseController: update()
+KnowledgebaseController -> Long: invoke dependency
+KnowledgebaseController -> Knowledgebase: invoke dependency
+KnowledgebaseController --> User : return
+User -> KnowledgebaseController: delete()
+KnowledgebaseController -> Long: invoke dependency
+KnowledgebaseController --> User : return
+@enduml

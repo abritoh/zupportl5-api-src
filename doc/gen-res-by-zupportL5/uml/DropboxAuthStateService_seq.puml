@@ -1,0 +1,24 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for DropboxAuthStateService
+
+actor User
+User -> DropboxAuthStateService: saveState()
+participant String
+DropboxAuthStateService -> String: invoke dependency
+DropboxAuthStateService -> String: invoke dependency
+DropboxAuthStateService -> String: invoke dependency
+participant LocalDateTime
+DropboxAuthStateService -> LocalDateTime: invoke dependency
+DropboxAuthStateService --> User : return
+User -> DropboxAuthStateService: getState()
+DropboxAuthStateService -> String: invoke dependency
+DropboxAuthStateService --> User : return
+User -> DropboxAuthStateService: deleteState()
+DropboxAuthStateService -> String: invoke dependency
+DropboxAuthStateService --> User : return
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for RunbookController
+
+actor User
+User -> RunbookController: getAll()
+RunbookController --> User : return
+User -> RunbookController: getById()
+participant Long
+RunbookController -> Long: invoke dependency
+RunbookController --> User : return
+User -> RunbookController: create()
+participant Runbook
+RunbookController -> Runbook: invoke dependency
+RunbookController --> User : return
+User -> RunbookController: update()
+RunbookController -> Long: invoke dependency
+RunbookController -> Runbook: invoke dependency
+RunbookController --> User : return
+User -> RunbookController: deleteById()
+RunbookController -> Long: invoke dependency
+RunbookController --> User : return
+@enduml

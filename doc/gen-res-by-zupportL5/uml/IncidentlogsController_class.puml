@@ -1,0 +1,21 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.IncidentlogsController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class IncidentlogsController {
+ - org.apache.clusterbr.zupportl5.service.IncidentlogsService service
+ + org.springframework.http.ResponseEntity<java.util.List<org.apache.clusterbr.zupportl5.entity.Incidentlogs>> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Incidentlogs> (java.lang.Integer) getById()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Incidentlogs> (org.apache.clusterbr.zupportl5.entity.Incidentlogs) create()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Incidentlogs> (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.Incidentlogs) update()
+ + org.springframework.http.ResponseEntity<java.lang.Void> (java.lang.Integer) delete()
+}
+@enduml

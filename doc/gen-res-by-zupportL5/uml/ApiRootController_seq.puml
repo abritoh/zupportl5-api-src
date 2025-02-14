@@ -1,0 +1,12 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for ApiRootController
+
+actor User
+User -> ApiRootController: aboutZupportL5Api()
+ApiRootController --> User : return
+@enduml

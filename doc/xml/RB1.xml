@@ -1,0 +1,18 @@
+<document version="1.0">
+    <document-type>RB</document-type>
+    <category>IT Operations|Routine Procedures|Backup|Database Backup Runbook</category>
+    <xmlheader>
+        <title>Database Backup Runbook</title>
+    </xmlheader>
+    <xmlcontent>
+        <steps>
+            <step>1. Verify the status of the database before backup.</step>
+            <step>2. Schedule the backup during low usage periods.</step>
+            <step>3. Use the preferred backup tools to initiate the backup.</step>
+            <step>4. Monitor the backup process and verify its completion.</step>
+            <step>5. Store backup files in a secure location.</step>
+            <step>6. Test the integrity of backup files regularly.</step>
+            <step>7. Update the backup log with the backup details.</step>
+        </steps>
+    </xmlcontent>
+</document>

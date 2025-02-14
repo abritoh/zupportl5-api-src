@@ -1,0 +1,28 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.service.EngineerService
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class EngineerService {
+ - org.slf4j.Logger logger
+ - org.apache.clusterbr.zupportl5.repository.EngineerRepository repository
+ - org.apache.clusterbr.zupportl5.service.MessageService msgService
+ + java.util.List<org.apache.clusterbr.zupportl5.entity.Engineer> () findAll()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Engineer> (java.lang.Long) getById()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Engineer> (java.lang.String) getByEmail()
+ + org.apache.clusterbr.zupportl5.entity.Engineer (org.apache.clusterbr.zupportl5.entity.Engineer) save()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Engineer> (java.lang.Long, org.apache.clusterbr.zupportl5.entity.Engineer) update()
+ + java.util.Optional<org.apache.clusterbr.zupportl5.entity.Engineer> (java.lang.Long, java.util.Map<java.lang.String, java.lang.Object>) partialUpdate()
+ + boolean (java.lang.Long) deleteById()
+ + org.apache.clusterbr.zupportl5.entity.Engineer (java.util.Map, org.apache.clusterbr.zupportl5.entity.Engineer) lambdapartialUpdate2()
+ + void (org.apache.clusterbr.zupportl5.entity.Engineer, java.lang.String, java.lang.Object) lambdapartialUpdate1()
+ + org.apache.clusterbr.zupportl5.entity.Engineer (org.apache.clusterbr.zupportl5.entity.Engineer, org.apache.clusterbr.zupportl5.entity.Engineer) lambdaupdate0()
+}
+@enduml

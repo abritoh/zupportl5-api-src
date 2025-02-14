@@ -1,0 +1,25 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for DropboxService
+
+actor User
+usecase "createDropboxClient" as UC_createDropboxClient
+User --> UC_createDropboxClient
+usecase "getFileNames" as UC_getFileNames
+User --> UC_getFileNames
+usecase "downloadFile" as UC_downloadFile
+User --> UC_downloadFile
+usecase "uploadFile" as UC_uploadFile
+User --> UC_uploadFile
+usecase "uploadFile" as UC_uploadFile
+User --> UC_uploadFile
+usecase "uploadFile" as UC_uploadFile
+User --> UC_uploadFile
+usecase "uploadFile" as UC_uploadFile
+User --> UC_uploadFile
+@enduml

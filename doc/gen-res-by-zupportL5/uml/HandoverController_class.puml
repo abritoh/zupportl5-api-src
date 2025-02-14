@@ -1,0 +1,25 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.controller.HandoverController
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class HandoverController {
+ - org.apache.clusterbr.zupportl5.service.HandoverService service
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Handover> (org.apache.clusterbr.zupportl5.entity.Handover) createHandover()
+ + org.springframework.http.ResponseEntity<java.util.List<org.apache.clusterbr.zupportl5.entity.Handover>> () getAll()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Handover> (java.lang.Integer) getById()
+ + org.springframework.http.ResponseEntity<org.apache.clusterbr.zupportl5.entity.Handover> (java.lang.Integer, org.apache.clusterbr.zupportl5.entity.Handover) update()
+ + org.springframework.http.ResponseEntity<java.lang.Void> (java.lang.Integer) delete()
+ + org.springframework.http.ResponseEntity () lambdaupdate3()
+ + org.springframework.http.ResponseEntity (org.apache.clusterbr.zupportl5.entity.Handover) lambdaupdate2()
+ + org.springframework.http.ResponseEntity () lambdagetById1()
+ + org.springframework.http.ResponseEntity (org.apache.clusterbr.zupportl5.entity.Handover) lambdagetById0()
+}
+@enduml

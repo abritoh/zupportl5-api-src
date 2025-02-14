@@ -1,0 +1,42 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for IncidentService
+
+actor User
+User -> IncidentService: findAll()
+IncidentService --> User : return
+User -> IncidentService: getById()
+participant Integer
+IncidentService -> Integer: invoke dependency
+IncidentService --> User : return
+User -> IncidentService: save()
+participant Incident
+IncidentService -> Incident: invoke dependency
+IncidentService --> User : return
+User -> IncidentService: update()
+IncidentService -> Integer: invoke dependency
+IncidentService -> Incident: invoke dependency
+IncidentService --> User : return
+User -> IncidentService: deleteById()
+IncidentService -> Integer: invoke dependency
+IncidentService --> User : return
+User -> IncidentService: getByCriteria()
+participant String
+IncidentService -> String: invoke dependency
+IncidentService -> String: invoke dependency
+IncidentService -> String: invoke dependency
+IncidentService --> User : return
+User -> IncidentService: getByCriteriaWithCriteriaAPI()
+IncidentService -> String: invoke dependency
+IncidentService -> String: invoke dependency
+IncidentService -> String: invoke dependency
+IncidentService --> User : return
+User -> IncidentService: lambdaupdate0()
+IncidentService -> Incident: invoke dependency
+IncidentService -> Incident: invoke dependency
+IncidentService --> User : return
+@enduml

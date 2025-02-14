@@ -1,0 +1,25 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.processor.JavadocProcessorConfig
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class JavadocProcessorConfig {
+ - java.lang.String SPACE
+ - java.lang.String PROJECT_SOURCE_CODE_PATH
+ - java.lang.String INPUT_DIAGRAMS_FOLDER
+ - java.lang.String COMMENTS_AFTER_SINCE
+ - java.lang.String TAG_UML_DIAGRAMS
+ - java.lang.String TAG_REST_API_END_POINTS
+ - java.lang.String COMMENTS_AFTER_AUTHOR
+ - java.lang.String PLANTUML_DIAGRAM_TAG_TEMPLATE
+ - java.lang.String[] STR_ARRAY_DIAGRAM_TYPES
+ - org.apache.clusterbr.zupportl5.processor.ProcessorSettings this0
+}
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for ResolutionStepService
+
+actor User
+User -> ResolutionStepService: getAll()
+ResolutionStepService --> User : return
+User -> ResolutionStepService: getById()
+participant Integer
+ResolutionStepService -> Integer: invoke dependency
+ResolutionStepService --> User : return
+User -> ResolutionStepService: create()
+participant ResolutionStep
+ResolutionStepService -> ResolutionStep: invoke dependency
+ResolutionStepService --> User : return
+User -> ResolutionStepService: update()
+ResolutionStepService -> Integer: invoke dependency
+ResolutionStepService -> ResolutionStep: invoke dependency
+ResolutionStepService --> User : return
+User -> ResolutionStepService: deleteById()
+ResolutionStepService -> Integer: invoke dependency
+ResolutionStepService --> User : return
+User -> ResolutionStepService: lambdaupdate1()
+ResolutionStepService -> Integer: invoke dependency
+ResolutionStepService --> User : return
+User -> ResolutionStepService: lambdaupdate0()
+ResolutionStepService -> ResolutionStep: invoke dependency
+ResolutionStepService -> ResolutionStep: invoke dependency
+ResolutionStepService --> User : return
+@enduml

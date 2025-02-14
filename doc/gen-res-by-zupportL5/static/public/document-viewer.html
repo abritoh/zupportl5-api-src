@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- By ClusterBR (arcbrth@gmail.com) | 2024-1209 | Compiled and deployed implementing MS-GitHub Wfs | Running on google-app-engine -->
+
+    <title>ZupportL5 Api | Document Viewer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/document-viewer.css">    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ZupportL5-Api | Document Viewer</h1>
+        </header>
+        
+        <main class="content">
+            <div class="left-panel">
+                <div class="tabs">
+                    <button class="tab-button active" id="allDocumentsTab">All Documents</button>
+                    <button class="tab-button" id="searchTab">Search</button>
+                </div>
+                <div id="allDocumentsContent" class="tab-content">
+                    <ul id="allDocumentsList"></ul>
+                </div>
+                <div id="searchContent" class="tab-content hidden">
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Enter keyword to search...">
+                        <button id="searchButton">Search</button>
+                    </div>
+                    <ul id="searchResultsList"></ul>
+                </div>
+            </div>            
+            <div class="right-panel">
+                <div id="documentDetails"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 ClusterBR | ZupportL5. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="/js/document-viewer.js"></script>
+</body>
+</html>

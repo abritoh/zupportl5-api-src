@@ -1,0 +1,13 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for AppInfoLoader
+
+actor User
+usecase "loadServerInfo" as UC_loadServerInfo
+User --> UC_loadServerInfo
+@enduml

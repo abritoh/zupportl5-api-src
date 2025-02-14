@@ -1,0 +1,28 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.entity.DropboxAuthState
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class DropboxAuthState {
+ - java.lang.String requestId
+ - java.lang.String state
+ - java.lang.String clientId
+ - java.time.LocalDateTime createdAt
+ - java.time.LocalDateTime expiresAt
+ + java.lang.String () getRequestId()
+ + void (java.lang.String) setRequestId()
+ + java.lang.String () getState()
+ + void (java.lang.String) setState()
+ + java.time.LocalDateTime () getCreatedAt()
+ + void (java.time.LocalDateTime) setCreatedAt()
+ + java.time.LocalDateTime () getExpiresAt()
+ + void (java.time.LocalDateTime) setExpiresAt()
+}
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+skinparam usecase {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+left to right direction
+title Use-Case Diagram for DocumentController
+
+actor User
+usecase "getViewForProcessXml" as UC_getViewForProcessXml
+User --> UC_getViewForProcessXml
+usecase "getAllDocuments" as UC_getAllDocuments
+User --> UC_getAllDocuments
+usecase "getDocument" as UC_getDocument
+User --> UC_getDocument
+usecase "searchDocuments" as UC_searchDocuments
+User --> UC_searchDocuments
+@enduml

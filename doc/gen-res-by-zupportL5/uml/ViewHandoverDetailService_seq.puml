@@ -1,0 +1,16 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for ViewHandoverDetailService
+
+actor User
+User -> ViewHandoverDetailService: findAll()
+ViewHandoverDetailService --> User : return
+User -> ViewHandoverDetailService: findById()
+participant Long
+ViewHandoverDetailService -> Long: invoke dependency
+ViewHandoverDetailService --> User : return
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for AppInfoLoader
+
+actor User
+User -> AppInfoLoader: loadServerInfo()
+participant Environment
+AppInfoLoader -> Environment: invoke dependency
+AppInfoLoader --> User : return
+@enduml

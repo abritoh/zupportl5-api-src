@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment>
+    <environments>
+        <!-- Local environment -->
+        <environment name="local">
+            <uri>http://localhost</uri>
+        </environment>
+
+        <!-- Production environment-->
+        <environment name="production">
+            <servers>
+                <!-- Azure server configuration -->
+                <server name="azure-1">
+                    <uri>https://azure.zupportl5.com</uri>
+                </server>
+                <!-- GCP server configuration -->
+                <server name="gcp-1">
+                    <uri>https://gcp.zupportl5.com</uri>
+                </server>
+            </servers>
+        </environment>
+    </environments>
+</deployment>

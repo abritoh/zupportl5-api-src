@@ -1,0 +1,1492 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ZupportL5 API Documentation",
+    "description": "Comprehensive OpenAPI-compliant JSON documentation for ZupportL5-API",
+    "version": "1.0.0",
+    "contact": {
+      "email": "arcbrth@gmail.com",
+      "name": "Development"
+    },
+    "license": {
+      "url": "https://github.com/abritoh/zupportl5-api",
+      "name": "Apache 2.0"
+    },
+    "origin": "This documentation was generated at 2025-02-14T16:17:34Z using ZupportL5 json-api-processor"
+  },
+  "paths": {
+    "/api/runbooks/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "runbook"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "deleteById",
+        "operationId": "deleteById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/runbooks/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "runbook"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/handover/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "handover"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/handover/": {
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "post": {
+        "summary": "createHandover",
+        "operationId": "createHandover",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "handover"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/priorities/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "priority"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/priorities/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "priority"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/batch/process-xmlfiles": {
+      "post": {
+        "summary": "processXmlFiles",
+        "operationId": "processXmlFiles",
+        "parameters": [
+          {
+            "name": "files",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "multipartfile[]"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getViewForProcessXml",
+        "operationId": "getViewForProcessXml",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/resolution-steps/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "resolutionstep"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "deleteById",
+        "operationId": "deleteById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/resolution-steps/": {
+      "post": {
+        "summary": "save",
+        "operationId": "save",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "resolutionstep"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/engineers/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "engineer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "patch": {
+        "summary": "partialUpdate",
+        "operationId": "partialUpdate",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "updates",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "map"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/engineers/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "engineer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/engineers/email/{email:.+@.+\\..+}": {
+      "get": {
+        "summary": "getByEmail",
+        "operationId": "getByEmail",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/engineers/id/{id:\\d+}": {
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/playbooks/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "playbook"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "deleteById",
+        "operationId": "deleteById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/playbooks/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "playbook"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/view-incident-details/": {
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/view-incident-details/{id}": {
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/view-handover-details/": {
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/view-handover-details/{id}": {
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "//": {
+      "unknown": {
+        "summary": "root",
+        "operationId": "root",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "//about": {
+      "unknown": {
+        "summary": "about",
+        "operationId": "about",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/status/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "status"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/status/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "runbook",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "status"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/documents/id/{idSource}": {
+      "get": {
+        "summary": "getDocument",
+        "operationId": "getDocument",
+        "parameters": [
+          {
+            "name": "idSource",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/documents/search": {
+      "get": {
+        "summary": "searchDocuments",
+        "operationId": "searchDocuments",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/documents/all": {
+      "get": {
+        "summary": "getAllDocuments",
+        "operationId": "getAllDocuments",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/documents/viewer": {
+      "get": {
+        "summary": "getViewForProcessXml",
+        "operationId": "getViewForProcessXml",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/incidentlogs/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "incidentLog",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "incidentlogs"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/incidentlogs/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "incidentlogs"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/incidents/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "incident"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/incidents/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "incident"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/performance-metrics/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "performancemetric"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/performance-metrics/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "performancemetric"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/teams/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "updatedTeam",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "team"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/teams/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "team"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/dropbox/start-auth": {
+      "get": {
+        "summary": "startAuthorization",
+        "operationId": "startAuthorization",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/dropbox/oauth2/callback": {
+      "get": {
+        "summary": "handleCallback",
+        "operationId": "handleCallback",
+        "parameters": [
+          {
+            "name": "",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "map"
+            }
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "httpservletrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/": {
+      "get": {
+        "summary": "aboutZupportL5Api",
+        "operationId": "aboutZupportL5Api",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/knowledgebase/{id}": {
+      "put": {
+        "summary": "update",
+        "operationId": "update",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          },
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "knowledgebase"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getById",
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/knowledgebase/": {
+      "post": {
+        "summary": "create",
+        "operationId": "create",
+        "parameters": [
+          {
+            "name": "item",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "knowledgebase"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "getAll",
+        "operationId": "getAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    }
+  }
+}

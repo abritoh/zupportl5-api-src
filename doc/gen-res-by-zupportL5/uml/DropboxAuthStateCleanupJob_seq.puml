@@ -1,0 +1,21 @@
+@startuml
+skinparam sequence {
+ ArrowColor #4D7A97 
+ ParticipantBorderColor #4D7A97 
+ ParticipantBackgroundColor #DEE3E9 
+}
+title Sequence Diagram for DropboxAuthStateCleanupJob
+
+actor User
+User -> DropboxAuthStateCleanupJob: cleanupExpiredStates()
+DropboxAuthStateCleanupJob --> User : return
+User -> DropboxAuthStateCleanupJob: lambdacleanupExpiredStates1()
+participant DropboxAuthState
+DropboxAuthStateCleanupJob -> DropboxAuthState: invoke dependency
+DropboxAuthStateCleanupJob --> User : return
+User -> DropboxAuthStateCleanupJob: lambdacleanupExpiredStates0()
+participant LocalDateTime
+DropboxAuthStateCleanupJob -> LocalDateTime: invoke dependency
+DropboxAuthStateCleanupJob -> DropboxAuthState: invoke dependency
+DropboxAuthStateCleanupJob --> User : return
+@enduml

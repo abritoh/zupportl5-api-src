@@ -1,0 +1,12 @@
+<!ELEMENT document (document-type, category, xmlheader, xmlcontent)>
+<!ATTLIST document version CDATA #REQUIRED>
+
+<!ELEMENT document-type (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT xmlheader (title)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT xmlcontent (steps)>
+<!ELEMENT steps (step+)>
+<!ELEMENT step (#PCDATA)>
+
+<!ENTITY % document-types "KB | PB | RB">

@@ -1,0 +1,24 @@
+@startuml
+skinparam activity {
+    BackgroundColor #DEE3E9
+    BorderColor #4D7A97
+    ArrowColor #4D7A97
+}
+
+start
+title XmlDocumentProcessorConfig Flow
+
+:xmlValidationStep;
+if (xmlValidationStep completed) then (yes)
+    :xmlDropboxUploadStep;
+    if (xmlDropboxUploadStep completed) then (yes)
+        :xmlDBInsertionStep;
+    else (failed)
+        :xmlDBInsertionStep;
+    endif
+else (failed)
+    stop
+endif
+
+stop
+@enduml

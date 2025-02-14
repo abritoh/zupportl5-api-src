@@ -1,0 +1,74 @@
+@startuml
+skinparam activity {
+ BackgroundColor #DEE3E9 
+ BorderColor #4D7A97 
+ ArrowColor #4D7A97 
+}
+!pragma useVerticalIf on
+start
+title Activity Diagram for DropboxTokenService
+
+if (init) then (yes)
+:init;
+endif
+if (loadDropboxCredentials) then (yes)
+:loadDropboxCredentials;
+endif
+if (validateIfNullGetFromEnvironmentVars) then (yes)
+:validateIfNullGetFromEnvironmentVars;
+endif
+if (getAuthorizationUrl) then (yes)
+:getAuthorizationUrl;
+endif
+if (getRefreshToken) then (yes)
+:getRefreshToken;
+endif
+if (saveSettings) then (yes)
+:saveSettings;
+endif
+if (getAccessTokenFromDBOrRequestNew) then (yes)
+:getAccessTokenFromDBOrRequestNew;
+endif
+if (isTokenExpired) then (yes)
+:isTokenExpired;
+endif
+if (dropboxCredentialsAreValid) then (yes)
+:dropboxCredentialsAreValid;
+endif
+if (getRefreshTokenFromDatabase) then (yes)
+:getRefreshTokenFromDatabase;
+endif
+if (getAccessTokenFromDatabase) then (yes)
+:getAccessTokenFromDatabase;
+endif
+if (getTokenFromDatabase) then (yes)
+:getTokenFromDatabase;
+endif
+if (checkIfTokenIsValid) then (yes)
+:checkIfTokenIsValid;
+endif
+if (decode) then (yes)
+:decode;
+endif
+if (lambdagetAuthorizationUrl3) then (yes)
+:lambdagetAuthorizationUrl3;
+else (nothing)
+:No Operation;
+endif
+if (lambdagetAuthorizationUrl2) then (yes)
+:lambdagetAuthorizationUrl2;
+else (nothing)
+:No Operation;
+endif
+if (lambdagetAuthorizationUrl1) then (yes)
+:lambdagetAuthorizationUrl1;
+else (nothing)
+:No Operation;
+endif
+if (lambdagetAuthorizationUrl0) then (yes)
+:lambdagetAuthorizationUrl0;
+else (nothing)
+:No Operation;
+endif
+stop
+@enduml

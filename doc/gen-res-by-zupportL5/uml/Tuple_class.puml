@@ -1,0 +1,26 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.dto.Tuple
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class Tuple {
+ - long serialVersionUID
+ - Value1 value1
+ - Value2 value2
+ + Value1 () getValue1()
+ + void (Value1) setValue1()
+ + Value2 () getValue2()
+ + void (Value2) setValue2()
+ + java.lang.String () toString()
+ + boolean (java.lang.Object) equals()
+ + int () hashCode()
+}
+Tuple ..|> javaioSerializable
+@enduml

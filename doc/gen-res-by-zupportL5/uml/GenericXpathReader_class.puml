@@ -1,0 +1,32 @@
+@startuml 
+skinparam class { 
+ BackgroundColor #DEE3E9 
+ ArrowColor #4D7A97 
+ BorderColor #4D7A97 
+}
+left to right direction 
+title Class Diagram for org.apache.clusterbr.zupportl5.utils.GenericXpathReader
+skinparam titleBackgroundColor White
+skinparam classHeaderBackgroundColor #4D7A97 
+skinparam stereotypeCBackgroundColor #F8981D 
+
+class GenericXpathReader {
+ - org.slf4j.Logger logger
+ - org.w3c.dom.Document document
+ - javax.xml.xpath.XPath xpath
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Void> (java.lang.String) setXmlFile()
+ + void (java.lang.String) loadXml()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.String> (java.lang.String) getAttribute()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Integer> (java.lang.String) getAttributeInt()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Double> (java.lang.String) getAttributeDouble()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Long> (java.lang.String) getAttributeLong()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Boolean> (java.lang.String) getAttributeBoolean()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.String> (java.lang.String) getNodeValue()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Integer> (java.lang.String) getNodeValueInt()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Double> (java.lang.String) getNodeValueDouble()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Long> (java.lang.String) getNodeValueLong()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Boolean> (java.lang.String) getNodeValueBoolean()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.util.List<java.lang.String>> (java.lang.String) getNodeValuesList()
+ + org.apache.clusterbr.zupportl5.dto.MethodResultXml<java.lang.Boolean> (java.lang.String, java.lang.String) isValidXML()
+}
+@enduml

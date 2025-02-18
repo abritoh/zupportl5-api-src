@@ -1,66 +1,3 @@
-# Zupportl5-Api 
-
-Elevating Support Engineering to the next level | simplifying resolutions
-
-## Zupportl5-Api repository
-
-This repository hosts the source-code for the **ZupportL5-api** project.
-
-**README.md Last update**: 2025-FEB-18
-
-## Versioned JavaDoc
-
-### Version 1.0
-<ul>
-<li>Main Api documentation: 
-<a target="_blank" href="https://abritoh.github.io/zupportl5-api-dochub/1.0/apidocs">
-https://abritoh.github.io/zupportl5-api-dochub/1.0/apidocs
-</a></li>
-<li>Test Api documentation: 
-<a target="_blank" href="https://abritoh.github.io/zupportl5-api-dochub/1.0/testapidocs">
-https://abritoh.github.io/zupportl5-api-dochub/1.0/testapidocs
-</a> 
-</li>
-</ul>
-
-
-## Zupportl5-Api
-
-___
-
-
-```bash
-___________________________________________________________________________
-
- ______                             _   _      _____                   _ 
-|___  /                            | | | |    |  ___|                 (_)
-   / / _   _ _ __  _ __   ___  _ __| |_| |    |___ \ ______ __ _ _ __  _ 
-  / / | | | | '_ \| '_ \ / _ \| '__| __| |        \ \______/ _` | '_ \| |
-./ /__| |_| | |_) | |_) | (_) | |  | |_| |____/\__/ /     | (_| | |_) | |
-\_____/\__,_| .__/| .__/ \___/|_|   \__\_____/\____/       \__,_| .__/|_|
-            | |   | |                                           | |      
-            |_|   |_|                                           |_|      
-
-__________________________________________________
-   ________           __            ____  ____ 
-  / ____/ /_  _______/ /____  _____/ __ )/ __ \
- / /   / / / / / ___/ __/ _ \/ ___/ __  / /_/ /
-/ /___/ / /_/ (__  ) /_/  __/ /  / /_/ / _, _/ 
-\____/_/\__,_/____/\__/\___/_/  /_____/_/ |_|  
-__________________________________________________
-
-___________________________________________________________________________
-
-```
-
-.
-
-.
-
-.
-___
-
-
 # ZupportL5 Overview
 
 ## ZupportL5 - Next Level Support Engineering
@@ -70,46 +7,44 @@ ___
 ### **Graphical representation of the technology-stack used to implement Zupport-L5-API (alphabetically sorted)**
 
 
-___
-![ci-cd](./src/main/resources/static/public/img/technology-stack-icons/ci-cd.png "continuous integration / continuous delivery devops cycle")
-![classgraph](./src/main/resources/static/public/img/technology-stack-icons/classgraph.png "classgraph for uml processing")
-![docker](./src/main/resources/static/public/img/technology-stack-icons/docker2.png "docker containers for deployment")
-![dtd](./src/main/resources/static/public/img/technology-stack-icons/dtd.png "document type definition, to validate application xml files")
-![dropbox](./src/main/resources/static/public/img/technology-stack-icons/dropbox.png "dropbox api to store application files")
-![git](./src/main/resources/static/public/img/technology-stack-icons/git.png "git-cli to handle code versioning")
-![github repository](./src/main/resources/static/public/img/technology-stack-icons/github.png "source-code repository and ci/cd engine")
-![github-actions](./src/main/resources/static/public/img/technology-stack-icons/github-actions.png "github workflows to automate deployment")
-![google-app-engine](./src/main/resources/static/public/img/technology-stack-icons/google-app-engine.png "google-app-engine to deploy the application")
-![google-cloud](./src/main/resources/static/public/img/technology-stack-icons/google-cloud.png "google-cloud to configure app hosting")
-![hibernate](./src/main/resources/static/public/img/technology-stack-icons/hibernate.png "hibernate implementation of JPA")
-![html](./src/main/resources/static/public/img/technology-stack-icons/html.png "for frontend-views")
-![java-ee](./src/main/resources/static/public/img/technology-stack-icons/java-ee.png "java-ee to implement the application")
-![javadoc](./src/main/resources/static/public/img/technology-stack-icons/javadoc.png "javadoc to generate documentation automated though code-processors")
-![javascript](./src/main/resources/static/public/img/technology-stack-icons/javascript.png "javascript to implement logic for frontend-pages")
-![jpa](./src/main/resources/static/public/img/technology-stack-icons/jpa.png "to handle database access in oo-manner")
-![json](./src/main/resources/static/public/img/technology-stack-icons/json.png "to handle the implemented API")
-![junit-mockito](./src/main/resources/static/public/img/technology-stack-icons/junit-mockito.png "for unit and integration testing")
-![linux](./src/main/resources/static/public/img/technology-stack-icons/linux.png "to compile and deploy through github workflows")
-![markdown](./src/main/resources/static/public/img/technology-stack-icons/markdown.png "to create app documentation for github")
-![maven](./src/main/resources/static/public/img/technology-stack-icons/maven.png "maven to compile, build the application and to execute code-processors")
-![microsoft-azure](./src/main/resources/static/public/img/technology-stack-icons/microsoft-azure.png "github actions runs in azure cloud")
-![mysql](./src/main/resources/static/public/img/technology-stack-icons/mysql.png "relational database used by the application")
-![oauth2](./src/main/resources/static/public/img/technology-stack-icons/oauth2.png "oauth2-sdk to implement authorization for dropbox")
-![openapi](./src/main/resources/static/public/img/technology-stack-icons/openapi.png "openapi to describe the application REST-api")
-![plantuml](./src/main/resources/static/public/img/technology-stack-icons/plantuml.png "to generate application UML diagrams")
-![prometheus](./src/main/resources/static/public/img/technology-stack-icons/prometheus.png "prometheus to implement application monitoring")
-![slf4j](./src/main/resources/static/public/img/technology-stack-icons/slf4j.png "for logging info when the application is running to be monitored in google logging service")
-![spring-batch](./src/main/resources/static/public/img/technology-stack-icons/spring-batch.png "spring-batch to implement application bushiness workflows")
-![spring-boot](./src/main/resources/static/public/img/technology-stack-icons/spring-boot.png "spring-boot to handle the application structure and all other components")
-![uml](./src/main/resources/static/public/img/technology-stack-icons/uml.png "the unified model language is used through plantuml")
-![undertown](./src/main/resources/static/public/img/technology-stack-icons/undertown.png "undertown lightweight web-server to run the application by means of docker container")
-![xml](./src/main/resources/static/public/img/technology-stack-icons/xml.png "to serialize and deserialize objects internally")
-![yml](./src/main/resources/static/public/img/technology-stack-icons/yml.png "to implement github workflows and google deployment files")
-![zupportl5api](./src/main/resources/static/public/img/technology-stack-icons/zupportl5api.png "Zupport-L5-api the resulting application")
-___
+![ci-cd](img/technology-stack-icons/ci-cd.png "continuous integration / continuous delivery devops cycle")
+![classgraph](img/technology-stack-icons/classgraph.png "classgraph for uml processing")
+![docker](img/technology-stack-icons/docker2.png "docker containers for deployment")
+![dtd](img/technology-stack-icons/dtd.png "document type definition, to validate application xml files")
+![dropbox](img/technology-stack-icons/dropbox.png "dropbox api to store application files")
+![git](img/technology-stack-icons/git.png "git-cli to handle code versioning")
+![github repository](img/technology-stack-icons/github.png "source-code repository and ci/cd engine")
+![github-actions](img/technology-stack-icons/github-actions.png "github workflows to automate deployment")
+![google-app-engine](img/technology-stack-icons/google-app-engine.png "google-app-engine to deploy the application")
+![google-cloud](img/technology-stack-icons/google-cloud.png "google-cloud to configure app hosting")
+![hibernate](img/technology-stack-icons/hibernate.png "hibernate implementation of JPA")
+![html](img/technology-stack-icons/html.png "for frontend-views")
+![java-ee](img/technology-stack-icons/java-ee.png "java-ee to implement the application")
+![javadoc](img/technology-stack-icons/javadoc.png "javadoc to generate documentation automated though code-processors")
+![javascript](img/technology-stack-icons/javascript.png "javascript to implement logic for frontend-pages")
+![jpa](img/technology-stack-icons/jpa.png "to handle database access in oo-manner")
+![json](img/technology-stack-icons/json.png "to handle the implemented API")
+![junit-mockito](img/technology-stack-icons/junit-mockito.png "for unit and integration testing")
+![linux](img/technology-stack-icons/linux.png "to compile and deploy through github workflows")
+![markdown](img/technology-stack-icons/markdown.png "to create app documentation for github")
+![maven](img/technology-stack-icons/maven.png "maven to compile, build the application and to execute code-processors")
+![microsoft-azure](img/technology-stack-icons/microsoft-azure.png "github actions runs in azure cloud")
+![mysql](img/technology-stack-icons/mysql.png "relational database used by the application")
+![oauth2](img/technology-stack-icons/oauth2.png "oauth2-sdk to implement authorization for dropbox")
+![openapi](img/technology-stack-icons/openapi.png "openapi to describe the application REST-api")
+![plantuml](img/technology-stack-icons/plantuml.png "to generate application UML diagrams")
+![prometheus](img/technology-stack-icons/prometheus.png "prometheus to implement application monitoring")
+![slf4j](img/technology-stack-icons/slf4j.png "for logging info when the application is running to be monitored in google logging service")
+![spring-batch](img/technology-stack-icons/spring-batch.png "spring-batch to implement application bushiness workflows")
+![spring-boot](img/technology-stack-icons/spring-boot.png "spring-boot to handle the application structure and all other components")
+![uml](img/technology-stack-icons/uml.png "the unified model language is used through plantuml")
+![undertown](img/technology-stack-icons/undertown.png "undertown lightweight web-server to run the application by means of docker container")
+![xml](img/technology-stack-icons/xml.png "to serialize and deserialize objects internally")
+![yml](img/technology-stack-icons/yml.png "to implement github workflows and google deployment files")
+![zupportl5api](img/technology-stack-icons/zupportl5api.png "Zupport-L5-api the resulting application")
 
 
-## **Application Overview** | [See implementation details](#DETAILS)
+## Application Overview | [See implementation details](#DETAILS)
 
 ZupportL5 is Support Engineering System designed to enhance Support beyond human capabilities.
 
@@ -176,7 +111,7 @@ User Stories
 *   **As a** _Financial Team Member_, **I want** to receive cost reports on support operations **so that** I can analyze and optimize numbers.
 *   **As a** _Financial Team Member_, **I want** to track the financial impact of common support issues **so that** I can identify high-cost areas for potential process improvements.
 
-## **Technological Solution**
+## Technological Solution
 
 ZupportL5 is built using modern Java technologies, following best practices in Software: Design, Development, Testing, and Deployment. Below are some of the core components and technologies used in the application:
 
@@ -244,7 +179,7 @@ SLF4J and Logback enable efficient logging at various levels.
 
 With SLF4J and Logback the application can capture detailed logs for monitoring, debugging, and performance tracking, enhancing observability and system insight.
 
-## **Functional & Non-Functional Requirements**
+## Functional & Non-Functional Requirements
 
 ### Functional Requirements
 
@@ -273,20 +208,20 @@ With SLF4J and Logback the application can capture detailed logs for monitoring,
 *   OAuth2 is implemented to access the Dropbox-API/SDK programmatically
 *   ZupportL5-API must be implemented to be deployed in traditional web servers as well as a microservice.
 
-## **ZupportL5-API Diagram of Components**
+## ZupportL5-API Diagram of Components
 
-![IMG](./src/main/resources/static/public/img/ZupportL5-api-components.png)
+![IMG](img/ZupportL5-api-components.png)
 
-## ER **Database Model**
+## ER Database Model
 
-![IMG](./src/main/resources/static/public/img/ZupportL5-api-er-diagram.png)
+![IMG](img/ZupportL5-api-er-diagram.png)
 
 Explore ZupportL5-API Online | Implementation details
 -----------------------------------------------------
 
 Most of the content provided below is created during compilation or packaging phases, through the implementation of processor classes, hence the source-code, the api and the project are self-descriptive.
 
-**Version 1.0 of ZupportL5-api** was deployed to Google-Cloud-Platform (GCP): *Zupport-L5-api System deployed to google-app-engine*, whereas **Zupport-L5-api database** was deployed to *google-cloud-sql (GCS)*.
+Version 1.0 of ZupportL5-api was deployed to Google-Cloud-Platform (GCP): **Zupport-L5-api System deployed to [google-app-engine](https://zupportl5.uc.r.appspot.com)**, whereas **Zupport-L5-api database** was deployed to **google-cloud-sql (GCS)**.
 
 More deployment (CI/CD) MS-Github Workflows will be implemented to ensure transparent deployment in different Cloud Platforms.
 
@@ -305,4 +240,3 @@ More deployment (CI/CD) MS-Github Workflows will be implemented to ensure transp
 [Goto TOP](#TOP)
 
 © 2025 ZupportL5. All Rights Reserved.
-

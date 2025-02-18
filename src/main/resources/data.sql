@@ -77,8 +77,8 @@ INSERT INTO team (name, description) VALUES
 ('Networking Team', 'Responsible for network-related incidents and issues'),
 ('Database Team', 'Handles database-related issues and incidents'),
 ('System Team', 'Manages system infrastructure and hardware'),
-('Support Team', 'Provides first-line support to customers'),
-('DevOps Team', 'Handles deployment and operational tasks');
+('Support Team', 'Handles operational tasks, ensuring system stability and performance'),
+('DevOps Team', 'Handles deployment, creates pipelines, manages src-code repositories');
 
 COMMIT;
 
